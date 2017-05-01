@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import './App.css'
-import { addMessage } from './api/messaging'
+import { addMessage } from '../api/messaging'
 import {connect} from 'react-redux'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
-class App extends Component {
+class ChatTest extends Component {
   constructor() {
     super()
     this.state = {
@@ -50,4 +50,4 @@ const mapStateToProps = function(appState) {
   }
 }
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps)(ChatTest)
