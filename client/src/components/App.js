@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import './App.css'
 import {connect} from 'react-redux'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import User from './User'
+import UserProfile from './UserProfile'
 import CreateUser from './CreateUser'
 import ParkView from './ParkView'
 import Home from './Home'
+import UserHomePage from './UserHomePage'
 
 
 class App extends Component {
@@ -20,9 +21,10 @@ class App extends Component {
     	<Router>
 		    <div>	
 		      	  <Route exact={true} path='/' component={Home} /> {/*Greeting Page with Logo and Login / Sign Up*/}
-							<Route path='/User/' component={User} />        {/*Where Availability results are displayed*/}
+							<Route path='/UserProfile/' component={UserProfile} />        {/*Where Availability results are displayed*/}
             	<Route path='/CreateUser/' component={CreateUser} />      {/*Where Availability Is Set*/}
           		<Route path='/ParkView' component={ParkView} />   {/*Create Event Listings here*/}
+              <Route path='/UserHomePage' component={UserHomePage} /> 
 		    </div>
 	  </Router>
     )

@@ -17,7 +17,8 @@ class Home extends React.Component {
       <div>
         Home Page
         <Link to={'/CreateUser/'} style={styles.link}>Create User</Link>
-        <Link to={'/User/'} style={styles.link}>User</Link>
+        <Link to={'/UserProfile/'} style={styles.link}>UserProfile</Link>
+        <Link to={'/UserHomePage/'} style={styles.link}>UserHomePage</Link>
         <Link to={'/ParkView/'} style={styles.link}>ParkView</Link>
       </div>
     )
