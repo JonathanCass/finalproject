@@ -3,9 +3,11 @@ import React from 'react'
 const styles ={
   top:{
     width: 650,
-    height: 420,
+    height: '100%',
     padding: 10,
-    background: 'aquamarine'
+    background: '#53BE16',
+    display: 'flex',
+    border: 'solid 1px #B3BACE'
   },
   topRight:{
     width: 310,
@@ -13,53 +15,73 @@ const styles ={
     marginLeft: 10
   },
   topLeft:{
-    marginTop: '-140px',
     width: 310,
     display: 'inline-block'
   },
   avatar:{
     width: 310,
-    height: 200,
-    background: 'pink'
+    height: 310,
+    background: 'white',
+    border: 'solid 1px black'
   },
   firstName:{
     marginTop: 10,
     width: 310,
-    height: 40
+    height: 40,
+    border: 'solid 1px black'
   },
   lastName:{
     marginTop: 10,
     width: 310,
-    height: 40
+    height: 40,
+    border: 'solid 1px black'
   },
   avatarUrl:{
     marginTop: 10,
     width: 310,
-    height: 40
+    height: 40,
+    border: 'solid 1px black'
   },
   privacy:{
     marginTop: 10,
     width: 310,
-    height: 40
+    height: 40,
+    border: 'solid 1px black'
   },
   activities:{
     width: 310,
-    height: 100,
+    height: 132,
+    border: 'solid 1px black'
   },
-  bio:{
+  activitiesTextArea:{
+    width: 308,
+    height: 102
+  },
+  infoBlock:{
     marginTop: 10,
     width: 310,
-    height: 100,
+    height: 112,
+    border: 'solid 1px black'
   },
-  hobbies:{
-    marginTop: 10,
-    width: 310,
-    height: 100,
+  textArea:{
+    width:308,
+    height: 82
   },
-  interests:{
-    marginTop: 10,
-    width: 310,
-    height: 100,
+  buttonBar:{
+    padding: 5,
+    display: 'flex',
+    justifyContent: 'space-between',
+    height:30,
+    width:308,
+    background: '#F2F2F2',
+    border: 'solid 1px black',
+    borderWidth: '1px 0 0 0'
+  },
+  editInfo:{
+    height: 20,
+    width: 60,
+    background: '#1DA2CF',
+    color: 'white'
   },
   bottom:{
 
@@ -98,10 +120,22 @@ class User extends React.Component {
             </select>
            </div>
            <div style={styles.topRight}>
-            <textarea style={styles.activities}>User's Activities Info</textarea>
-            <textarea style={styles.bio}>Brief Bio</textarea>
-            <textarea style={styles.hobbies}>Hobbies</textarea>
-            <textarea style={styles.interests}>Interests, Movies, Music, Shows, Books</textarea>
+            <div style={styles.activities}>
+              <textarea style={styles.activitiesTextArea}></textarea>
+              <div style={styles.buttonBar}><span>User's Activities Info</span><button style={styles.editInfo}>Edit</button></div>
+            </div>
+            <div style={styles.infoBlock}>
+              <textarea style={styles.textArea}></textarea>
+              <div style={styles.buttonBar}><span>User's Bio</span><button style={styles.editInfo}>Edit</button></div>
+            </div>
+            <div style={styles.infoBlock}>
+              <textarea style={styles.textArea}></textarea>
+              <div style={styles.buttonBar}><span>Hobbies</span><button style={styles.editInfo}>Edit</button></div>
+            </div>
+            <div style={styles.infoBlock}>
+              <textarea style={styles.textArea}>Movies, Music, Shows, Books</textarea>
+              <div style={styles.buttonBar}><span>Interests</span><button style={styles.editInfo}>Edit</button></div>
+            </div>
            </div>
           
           <div style={styles.bottom}>
