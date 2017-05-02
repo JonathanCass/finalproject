@@ -3,13 +3,20 @@ const styles ={
       width: 1300,
       display: 'flex',
   },
+  AvailabilityContainer:{
+      width: 1300,
+       background: '#53BE16'
+  },
   top:{
     width: 650,
-    height: '100%',
     padding: 10,
     background: '#53BE16',
     display: 'flex',
-    border: 'solid 1px #B3BACE'
+  },
+  bottom:{
+    width: 650,
+    padding: 10,
+    display: 'flex',
   },
   right:{
     width: 310,
@@ -119,17 +126,28 @@ const styles ={
     background: '#1DA2CF',
     color: 'white',
     marginTop: 6,
-    marginRight: 6
+    marginRight: 6,
+    border: 'solid 1px black',
+    borderRadius: 3
   },
   availabilityHeader:{
       height: 40,
+      paddingTop: 10,
       width: 650,
       fontSize: 36,
       color: '#FFFF00',
       textAlign: 'center',
+      display: 'block', 
+  },
+  addAvailability:{
+      margin: 'auto',
+      height: 40,
+      width: 310,
+      background: '#1DA2CF',
+      color: 'white',
       display: 'block',
-      background: '#53BE16',
-      border: 'solid 1px #B3BACE' 
+      border: 'solid 1px black',
+      borderRadius: 3
   }
 }
 export default styles
