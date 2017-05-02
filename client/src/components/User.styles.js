@@ -3,13 +3,6 @@ const styles ={
       width: 1300,
       display: 'flex',
   },
-  availabilityContainer:{
-    width: 650,
-    height: '100%',
-    padding: 10,
-    background: '#53BE16',
-    border: 'solid 1px #B3BACE'
-  },
   top:{
     width: 650,
     height: '100%',
@@ -77,7 +70,7 @@ const styles ={
   },
   AmPm:{
     marginTop: 10,
-    width: 60,
+    width: 68,
     height: 38,
     border: 'solid 1px black'
   },
@@ -130,11 +123,13 @@ const styles ={
   },
   availabilityHeader:{
       height: 40,
-      width: 630,
+      width: 650,
       fontSize: 36,
       color: '#FFFF00',
       textAlign: 'center',
-      display: 'block' 
+      display: 'block',
+      background: '#53BE16',
+      border: 'solid 1px #B3BACE' 
   }
 }
 export default styles

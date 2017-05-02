@@ -16,9 +16,10 @@ class UserAvailability extends React.Component {
   }
   render() {
     return (
-      <div style={styles.availabilityContainer}>
+        <div>
         <div style={styles.availabilityHeader}>User Availability Settings</div>
-        
+        <div style={styles.top}>
+            
         <div style={styles.left}>
             <select name="area" style={styles.select} onChange={this.handleChange} value={this.state.area}>
                 <option value="">Select Area of City</option>
@@ -83,6 +84,7 @@ class UserAvailability extends React.Component {
             </select>
         </div>
 
+      </div>
       </div>
     )
   }
