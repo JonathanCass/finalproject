@@ -1,0 +1,106 @@
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+body {
+   margin-top:15%;
+}
+#logo {
+    height:200px;
+    width:415px;
+    margin-left:10%;
+}
+.topLine {
+    border:1px solid #d2d9da;
+    width:900px;
+    position:absolute;
+    margin-top:-1%;
+    margin-left:14.8%;
+}
+h4 {
+    float:right;
+    margin-right:15%;
+    margin-top:-1%;
+}
+.user {
+    float:right;
+    margin-top:-10%;
+    margin-right:13%;
+}
+.user input {
+    height:35px;
+    margin:5px;
+    color:gray;
+    font-size:15px;
+    text-align: center;
+}
+.user button {
+    height:35px;
+    margin:5px;
+    width:120px;
+    border-radius:5%;
+    font-size:15px;
+    color:white;
+    cursor:pointer;
+}
+.carouselContainer {
+    border:1px solid #d2d9da;
+    width:900px;
+    overflow:hidden;
+    margin-left:15%;
+}
+/*.pictures {   
+    height: 225px;
+    margin-left:15%;
+    margin-top:20%;
+}*/
+img {
+    width:630px;
+    height:auto;
+    margin-top:-14%;
+}
+.happening {
+    margin-left:33%;
+    margin-top:3%;
+    font-family: 'Lobster', cursive; /*SAMPLE FONT FOR NOW*/
+}
+.matches {
+    display:flex;
+    margin-left:12%;
+}
+#person {
+    border:1px solid gray;
+    border-radius:50%;
+    height:180px;
+    width:180px;
+    text-align:center;
+    line-height:180px;
+    margin:20px;
+    list-style: none;
+}
+/*.slide {
+    animation: slide 23s infinite;
+}
+.slide:hover {
+    animation-play-state: paused;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  } 
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+ 
+  75% {
+    transform: translateX(-75%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}*/
+
