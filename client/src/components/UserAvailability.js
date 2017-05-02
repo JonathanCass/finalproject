@@ -23,11 +23,11 @@ class UserAvailability extends React.Component {
         <div style={styles.left}>
             <select name="area" style={styles.select} onChange={this.handleChange} value={this.state.area}>
                 <option value="">Select Area of City</option>
-                <option value="1">Northwest</option>
-                <option value="2">Southwest</option>
-                <option value="3">Northeast</option>
-                <option value="4">Southeast</option>
-                <option value="5">Surrounding</option>
+                <option value="1">Northwest Las Vegas</option>
+                <option value="2">Southwest Las Vegas</option>
+                <option value="3">Northeast Las Vegas</option>
+                <option value="4">Southeast Las Vegas</option>
+                <option value="5">Surrounding Area</option>
             </select>
             <select name="day" style={styles.select} onChange={this.handleChange} value={this.state.day}>
                 <option value="">Select day of week</option>
@@ -42,8 +42,9 @@ class UserAvailability extends React.Component {
         </div>
 
         <div style={styles.right}>
+            <div style={styles.timeLabel}>From</div>
             <select name="from" style={styles.time} onChange={this.handleChange} value={this.state.from}>
-                <option value={0}>From</option>
+                <option value={0}></option>
                 <option value={1}>1</option>
                 <option value={2}>2</option>
                 <option value={3}>3</option>
@@ -62,8 +63,9 @@ class UserAvailability extends React.Component {
                 <option value="AM">AM</option>
                 <option value="PM">PM</option>
             </select>
+            <div style={styles.timeLabel}>To</div>
             <select name="to" style={styles.time} onChange={this.handleChange} value={this.state.to}>
-                <option value={0}>To</option>
+                <option value={0}></option>
                 <option value={1}>1</option>
                 <option value={2}>2</option>
                 <option value={3}>3</option>

@@ -69,9 +69,18 @@ const styles ={
     height: 38,
     border: 'solid 1px black'
   },
+  timeLabel:{
+    width: 60,
+    height: 38,
+    fontSize: 24,
+    color: 'white',
+    padding: '0 2px 0 0 ',
+    textAlign: 'right',
+    display: 'inline-block'
+  },
   time:{
     marginTop: 10,
-    width: 240,
+    width: 180,
     height: 38,
     border: 'solid 1px black'
   },
