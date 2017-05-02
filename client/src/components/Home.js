@@ -5,10 +5,12 @@ import Carousel from 'nuka-carousel'
 
 
 class Home extends React.Component {
-//   constructor(props) {
- 
-//    super(props)
-//   }
+  constructor(props) { 
+   super(props)
+   this.state = {
+     login:''
+   }
+}
 
 handleSubmit = (e) => {  // FINISH HANDLE FUNCTIONS
   e.preventDefault()
@@ -45,13 +47,15 @@ handleChange = (e) => {
               <img alt='' src="http://latina.lu/wp-content/uploads/2017/04/tenis-003.jpg"/>
           </Carousel>  
        </section>
+      
        <h1 className="happening">What's Happening In Your Area</h1>
           <ul className="matches">
-            <li id="person">Match</li>
+            <li id="person">Match</li> 
             <li id="person">Match</li>
             <li id="person">Match</li>
             <li id="person">Match</li>
           </ul>
+          {/*{this.state.dataname}*/}
       </div>
     )
   }

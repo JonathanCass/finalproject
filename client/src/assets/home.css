@@ -4,12 +4,12 @@ html {box-sizing: border-box;}
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 
 body {
-   margin-top:15%;
-  
+   margin-top:15%; 
+
 }
 #logo {
-    height:200px;
-    width:415px;
+    height:180px;
+    width:350px;
     margin-left:10%;
 }
 .topLine {
@@ -45,18 +45,14 @@ h4 {
     color:white;
     cursor:pointer;
 }
-.carouselContainer {
+.carouselContainer{
     border:1px solid #d2d9da;
     width:900px;
     overflow:hidden;
     margin-left:15%;
 }
-/*.pictures {   
-    height: 225px;
-    margin-left:15%;
-    margin-top:20%;
-}*/
-img {
+
+img {  
     width:630px;
     height:auto;
     margin-top:-14%;
@@ -68,40 +64,16 @@ img {
 }
 .matches {
     display:flex;
-    margin-left:12%;
+    margin-left:9%;
 }
 #person {
     border:1px solid gray;
     border-radius:50%;
-    height:180px;
-    width:180px;
+    height:200px;
+    width:200px;
     text-align:center;
-    line-height:180px;
+    line-height:200px;
     margin:20px;
     list-style: none;
 }
-/*.slide {
-    animation: slide 23s infinite;
-}
-.slide:hover {
-    animation-play-state: paused;
-}
-@keyframes slide {
-  0% {
-    transform: translateX(0%);
-  } 
-  25% {
-    transform: translateX(-25%);
-  }
-  50% {
-    transform: translateX(-50%);
-  }
- 
-  75% {
-    transform: translateX(-75%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}*/
 
