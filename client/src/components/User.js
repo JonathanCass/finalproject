@@ -20,68 +20,83 @@ const styles ={
   },
   avatar:{
     width: 310,
-    height: 310,
+    height: 300,
     background: 'white',
     border: 'solid 1px black'
   },
-  firstName:{
+  lineInput:{
     marginTop: 10,
     width: 310,
     height: 40,
-    border: 'solid 1px black'
+    border: 'solid 1px black',
+    textIndent: 5,
+    borderRadius: 3
   },
-  lastName:{
+  ageInput:{
     marginTop: 10,
-    width: 310,
+    width: 150,
     height: 40,
-    border: 'solid 1px black'
+    border: 'solid 1px black',
+    textIndent: 5,
+    borderRadius: 3
   },
-  avatarUrl:{
+  gender:{
     marginTop: 10,
-    width: 310,
+    marginLeft: 10,
+    width: 150,
     height: 40,
     border: 'solid 1px black'
   },
   privacy:{
     marginTop: 10,
     width: 310,
-    height: 40,
+    height: 38,
     border: 'solid 1px black'
   },
   activities:{
     width: 310,
     height: 132,
-    border: 'solid 1px black'
+    border: 'solid 1px black',
+    borderRadius: 3,
+    overflow: 'hidden',
   },
   activitiesTextArea:{
     width: 308,
-    height: 102
+    height: 102,
+    border: 'solid 1px black',
+    borderWidth: '0 0 1px 0'
   },
   infoBlock:{
     marginTop: 10,
     width: 310,
     height: 112,
-    border: 'solid 1px black'
+    border: 'solid 1px black',
+    overflow: 'hidden',
+    borderRadius: 3
   },
   textArea:{
     width:308,
-    height: 82
+    height: 82,
+    border: 'solid 1px black',
+    borderWidth: '0 0 1px 0'
   },
   buttonBar:{
-    padding: 5,
+    marginTop: -6,
     display: 'flex',
     justifyContent: 'space-between',
     height:30,
     width:308,
     background: '#F2F2F2',
-    border: 'solid 1px black',
-    borderWidth: '1px 0 0 0'
+    lineHeight: '32px',
+    textIndent: 6
   },
   editInfo:{
     height: 20,
     width: 60,
     background: '#1DA2CF',
-    color: 'white'
+    color: 'white',
+    marginTop: 6,
+    marginRight: 6
   },
   bottom:{
 
@@ -92,7 +107,7 @@ class User extends React.Component {
   constructor() {
     super()
     this.state = {
-      avatarUrl:'',firstName:'',lastName:'',privacy:'',bio:'',hobbies:'',interests:'',activities:[]
+      avatarUrl:'',firstName:'',lastName:'',privacy:'',bio:'',hobbies:'',interests:'',email:'',activities:[],age: 0,
     }
   }
 
@@ -109,9 +124,16 @@ class User extends React.Component {
         <div style={styles.top}>
           <div style={styles.topLeft}>
             <div style={styles.avatar}>AVATAR PICTURE</div>
-            <input type="text" name="firstName" placeholder="First Name" onChange={this.handleChange} style={styles.firstName} value={this.state.firstName}></input>
-            <input type="text" name="lastName" placeholder="Last Name" onChange={this.handleChange} style={styles.lastName} value={this.state.lastName}></input>
-            <input type="text" name="avatarUrl" placeholder="Avatar Url" onChange={this.handleChange} style={styles.firstName} value={this.state.avatarUrl}></input>
+            <input type="text" name="firstName" placeholder="First Name" onChange={this.handleChange} style={styles.lineInput} value={this.state.firstName}></input>
+            <input type="text" name="lastName" placeholder="Last Name" onChange={this.handleChange} style={styles.lineInput} value={this.state.lastName}></input>
+            <input type="text" name="avatarUrl" placeholder="Avatar Url" onChange={this.handleChange} style={styles.lineInput} value={this.state.avatarUrl}></input>
+            <input type="email" name="email" placeholder="Email" onChange={this.handleChange} style={styles.lineInput} value={this.state.avatarUrl}></input>
+            <input type="text" name="age" placeholder="Age" onChange={this.handleChange} style={styles.ageInput} value={this.state.avatarUrl}></input>
+            <select style={styles.gender}>
+              <option value="">Select Gender</option>
+              <option value="private">Male</option>
+              <option value="friends">Female</option>
+            </select>
             <select style={styles.privacy}>
               <option value="">User Page Privacy Setting</option>
               <option value="private">Private</option>
@@ -138,9 +160,9 @@ class User extends React.Component {
             </div>
            </div>
           
-          <div style={styles.bottom}>
+          {/*<div style={styles.bottom}>
             User Availability Settings
-          </div>
+          </div>*/}
         </div>
 
       </div>
