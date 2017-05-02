@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './User.styles.js'
+import UserAvailabilityGrid from './UserAvailabilityGrid'
 
 class UserAvailability extends React.Component {
     constructor() {
@@ -88,6 +89,9 @@ class UserAvailability extends React.Component {
         
       </div>
       <button style={styles.addAvailability}>Add to User Availability</button>
+      
+      <UserAvailabilityGrid/>
+
       </div>
     )
   }

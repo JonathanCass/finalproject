@@ -1,11 +1,11 @@
 const styles ={
   UserContainer:{
-      width: 1300,
-      display: 'flex',
+    width: 1300,
+    display: 'flex',
   },
   AvailabilityContainer:{
-      width: 1300,
-       background: '#53BE16'
+    width: 1300,
+    background: '#53BE16'
   },
   top:{
     width: 650,
