@@ -1,4 +1,5 @@
 import React from 'react'
+import 'font-awesome/css/font-awesome.css'
 
 const styles={
     friendsContainer:{
@@ -47,7 +48,9 @@ const styles={
         height:40,
         width:40,
         borderRadius: 5,
-        background: "#D50000",
+        background: "white",
+        color: '#C81740',
+        fontSize: 24
     },
     nextGrid:{
         border: 'solid 1px black',
@@ -92,7 +95,7 @@ class Friends extends React.Component {
         <div style={styles.userMain}>
             <div style={styles.avatar}>Avatar</div>
             <div style={styles.nextBlock}>    
-                <div style={styles.nextLabel}><button style={styles.arrowButton}></button><span>Friends Name</span><button style={styles.arrowButton}></button></div>
+                <div style={styles.nextLabel}><button style={styles.arrowButton}><i className="fa fa-arrow-left" aria-hidden="true"></i></button><span>Friends Name</span><button style={styles.arrowButton}><i className="fa fa-arrow-right" aria-hidden="true"></i></button></div>
                 <div style={styles.nextGrid}>
                     <div style={styles.gridEntry}>Date</div>
                     <div style={styles.gridEntry}>Location</div>

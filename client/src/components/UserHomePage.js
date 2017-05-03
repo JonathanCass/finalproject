@@ -2,6 +2,7 @@ import React from 'react'
 import UsersEvents from './UsersEvents'
 import UserMatches from './UserMatches'
 import Friends from './Friends'
+import 'font-awesome/css/font-awesome.css'
 
 const styles={
     userHomeContainer:{
@@ -42,16 +43,19 @@ const styles={
         width: 413,
         height: 50,
         fontSize: 26,
-        color: '#d50000',
+        color: 'white',
         textAlign: 'center',
         marginBottom: 10,
-        paddingTop: 5
+        paddingTop: 5,
+        lineHeight: '40px'
     },
     arrowButton:{
         height:40,
         width:40,
         borderRadius: 5,
-        background: "#D50000",
+        background: "white",
+        color: '#C81740',
+        fontSize: 24
     },
     nextGrid:{
         border: 'solid 1px black',
@@ -107,7 +111,7 @@ class UserHomePage extends React.Component {
         <div style={styles.userMain}>
             <div style={styles.avatar}>Avatar</div>
             <div style={styles.nextBlock}>    
-                <div style={styles.nextLabel}><button style={styles.arrowButton}></button><span>Upcoming Activity</span><button style={styles.arrowButton}></button></div>
+                <div style={styles.nextLabel}><button style={styles.arrowButton}><i className="fa fa-arrow-left" aria-hidden="true"></i></button><span>Upcoming Activity</span><button style={styles.arrowButton}><i className="fa fa-arrow-right" aria-hidden="true"></i></button></div>
                 <div style={styles.nextGrid}>
                     <div style={styles.gridEntry}>Date</div>
                     <div style={styles.gridEntry}>Location</div>
