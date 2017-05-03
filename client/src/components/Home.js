@@ -1,20 +1,19 @@
 import React from 'react'
 import '../assets/home.css'
 import Carousel from 'nuka-carousel'
-
-
+import {Link} from 'react-router-dom'
+import {getUsers} from '../api/messaging'
+import {connect} from 'react-redux'
 
 class Home extends React.Component {
   constructor(props) { 
-   super(props)
-   this.state = {
-     login:''
+    super(props)
+      this.state = {
+      login:''
    }
 }
-
 handleSubmit = (e) => {  // FINISH HANDLE FUNCTIONS
   e.preventDefault()
-
 }
 handleClick = (e) => {
   e.preventDefault()
@@ -23,11 +22,13 @@ handleClick = (e) => {
 handleChange = (e) => {
   this.setState({
     [e.target.name]:e.target.value
-    
   })
 }
-
+componentWillMount(){
+  	getUsers()
+}
   render() {
+    //console.log('this.state.props', this.state.props)
     return (
       <div className="beginningContainer">
 
@@ -49,9 +50,21 @@ handleChange = (e) => {
             <li id="person">Match</li>
           </ul>
           {/*{this.state.dataname}*/}
+      <div>
+        Home Page
+        <Link to={'/CreateUser/'}>Create User</Link>
+        <Link to={'/UserProfile/'}>UserProfile</Link>
+        <Link to={'/UserHomePage/'}>UserHomePage</Link>
+        <Link to={'/ParkView/'}>ParkView</Link>
+      </div>
+
       </div> //end of container
     )
   }
 }
 
-export default Home
+function mapStateToProps(appState){
+	return {users: appState.users}
+}
+
+export default connect(mapStateToProps)(Home)
