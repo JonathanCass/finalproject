@@ -2,15 +2,14 @@ const styles ={
   UserContainer:{
     width: 1300,
     display: 'flex',
+    background: 'linear-gradient( to bottom right, #56CCF2 , #2F80ED )'
   },
   AvailabilityContainer:{
     width: 1300,
-    background: '#53BE16'
   },
   top:{
     width: 650,
     padding: 10,
-    background: '#53BE16',
     display: 'flex',
   },
   bottom:{
@@ -132,12 +131,14 @@ const styles ={
   editInfo:{
     height: 20,
     width: 60,
-    background: '#1DA2CF',
+    background: '#53BE16',
     color: 'white',
     marginTop: 6,
     marginRight: 6,
     border: 'solid 1px black',
-    borderRadius: 3
+    borderRadius: 3,
+    fontSize: 15,
+    lineHeight: '14px'
   },
   availabilityHeader:{
       height: 40,
@@ -152,7 +153,8 @@ const styles ={
       margin: 'auto',
       height: 40,
       width: 310,
-      background: '#1DA2CF',
+      fontSize: 16,
+      background: '#53BE16',
       color: 'white',
       display: 'block',
       border: 'solid 1px black',

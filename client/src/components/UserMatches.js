@@ -6,10 +6,8 @@ const styles={
         border: 'solid 1px black',
         borderWidth: '1px 0 0 1px',
         marginLeft: 10,
-        height: 238,
         display: 'flex',
         flexWrap: 'wrap',
-        background: '#53BE16',
     },
     matchBox:{
         width: 157,
@@ -21,7 +19,7 @@ const styles={
     matchAvatar:{
         width:156,
         height:156,
-        background: 'pink',
+        background: 'white',
         border: 'solid 1px black',
         borderWidth: '0 0 1px 0',
     },
@@ -33,7 +31,7 @@ const styles={
         borderWidth: '1px 0 1px 0',
         lineHeight: '40px',
         textAlign: 'center',
-        background: 'purple',
+        background: '#53BE16',
         color: 'white'
     }
 }
@@ -55,11 +53,18 @@ class UserMatches extends React.Component {
             <div style={styles.matchAvatar}>Avatar</div>
             <div style={styles.matchLine}>Debrah Scott</div>
             <div style={styles.matchLine}>Southeest Las Vegas</div>
-        </div><div style={styles.matchBox}>
+        </div>
+        <div style={styles.matchBox}>
             <div style={styles.matchAvatar}>Avatar</div>
             <div style={styles.matchLine}>Peter Griffin</div>
             <div style={styles.matchLine}>Surrounding Area</div>
-        </div><div style={styles.matchBox}>
+        </div>
+        <div style={styles.matchBox}>
+            <div style={styles.matchAvatar}>Avatar</div>
+            <div style={styles.matchLine}>Juice Box</div>
+            <div style={styles.matchLine}>Northeast Las Vegas</div>
+        </div>
+        <div style={styles.matchBox}>
             <div style={styles.matchAvatar}>Avatar</div>
             <div style={styles.matchLine}>Juice Box</div>
             <div style={styles.matchLine}>Northeast Las Vegas</div>

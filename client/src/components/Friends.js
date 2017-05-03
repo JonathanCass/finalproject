@@ -3,13 +3,13 @@ import UsersEvents from './UsersEvents'
 import UserMatches from './UserMatches'
 
 const styles={
-    userHomeContainer:{
-        width: 1300,
-        background: 'linear-gradient( to bottom right, #56CCF2 , #2F80ED )'
+    friendsContainer:{
+        width: 650,
+        background: '#53BE16'
     },
     header:{
         width: 650,
-        fontSize: 32,
+        fontSize: 30,
         color: '#FFFF00',
         textAlign: 'center',
         height: 40,
@@ -19,6 +19,7 @@ const styles={
     userMain:{
         width: 650,
         padding: 10,
+        background: '#53BE16',
         display: 'flex'
     },
     avatar:{
@@ -67,7 +68,7 @@ const styles={
         textAlign: 'center',
         lineHeight: '42px',
         color: 'white',
-        background: '#53BE16'
+        background: '#1DA2CF'
     },
     gridWith:{
         height: 40,
@@ -78,21 +79,11 @@ const styles={
         textAlign: 'center',
         lineHeight: '42px',
         color: 'white',
-        background: '#53BE16'
-    },
-    gridHeader:{
-        height: 40,
-        paddingTop: 10,
-        width: 630,
-        fontSize: 32,
-        color: '#FFFF00',
-        textAlign: 'center',
-        display: 'block',
-        marginBottom: 10 
-    },
+        background: '#1DA2CF'
+    }
 }
 
-class UserHomePage extends React.Component {
+class Friends extends React.Component {
 //   constructor(props) {
  
 //    super(props)
@@ -101,28 +92,24 @@ class UserHomePage extends React.Component {
   render() {
     return (
       <div style={styles.userHomeContainer}>
-        <div style={styles.header}>Welcome to Go Vegas! UserName</div>
+        <div style={styles.header}>What Friends are Doing</div>
         
         <div style={styles.userMain}>
             <div style={styles.avatar}>Avatar</div>
             <div style={styles.nextBlock}>    
-                <div style={styles.nextLabel}><button style={styles.arrowButton}></button><span>Upcoming Activity</span><button style={styles.arrowButton}></button></div>
+                <div style={styles.nextLabel}><button style={styles.arrowButton}></button><span>Friends Name</span><button style={styles.arrowButton}></button></div>
                 <div style={styles.nextGrid}>
                     <div style={styles.gridEntry}>Date</div>
                     <div style={styles.gridEntry}>Location</div>
                     <div style={styles.gridEntry}>Hour AM/PM</div>
                     <div style={styles.gridEntry}>Activity</div>
-                    <div style={styles.gridWith}>Partner (User Profile Link)</div>
+                    <div style={styles.gridWith}>No Partner Yet, Click to Join!</div>
                 </div>
             </div>
         </div>
-        <div style={styles.gridHeader}>User's Created Events</div>
-        <UsersEvents/>
-        <div style={styles.gridHeader}>User's Matches</div>
-        <UserMatches/>
       </div>
     )
   }
 }
 
-export default UserHomePage
+export default Friends

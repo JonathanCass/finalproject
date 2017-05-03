@@ -4,7 +4,6 @@ const styles = {
     GridContainer:{
         width: 650,
         padding: 10,
-        background: '#53BE16'
     },
     gridLabel:{
         width: 151,
