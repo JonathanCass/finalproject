@@ -1,11 +1,8 @@
 import React from 'react'
-import UsersEvents from './UsersEvents'
-import UserMatches from './UserMatches'
 
 const styles={
     friendsContainer:{
         width: 650,
-        background: '#53BE16'
     },
     header:{
         width: 650,
@@ -19,7 +16,6 @@ const styles={
     userMain:{
         width: 650,
         padding: 10,
-        background: '#53BE16',
         display: 'flex'
     },
     avatar:{
@@ -68,7 +64,7 @@ const styles={
         textAlign: 'center',
         lineHeight: '42px',
         color: 'white',
-        background: '#1DA2CF'
+        background: '#53BE16'
     },
     gridWith:{
         height: 40,
@@ -79,7 +75,7 @@ const styles={
         textAlign: 'center',
         lineHeight: '42px',
         color: 'white',
-        background: '#1DA2CF'
+        background: '#53BE16'
     }
 }
 
@@ -93,7 +89,6 @@ class Friends extends React.Component {
     return (
       <div style={styles.userHomeContainer}>
         <div style={styles.header}>What Friends are Doing</div>
-        
         <div style={styles.userMain}>
             <div style={styles.avatar}>Avatar</div>
             <div style={styles.nextBlock}>    

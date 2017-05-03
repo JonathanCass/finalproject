@@ -1,6 +1,7 @@
 import React from 'react'
 import UsersEvents from './UsersEvents'
 import UserMatches from './UserMatches'
+import Friends from './Friends'
 
 const styles={
     userHomeContainer:{
@@ -120,6 +121,7 @@ class UserHomePage extends React.Component {
         <UsersEvents/>
         <div style={styles.gridHeader}>User's Matches</div>
         <UserMatches/>
+        <Friends/>
       </div>
     )
   }
