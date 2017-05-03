@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/home.css'
 import Carousel from 'nuka-carousel'
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 class Home extends React.Component {
@@ -35,15 +35,17 @@ handleChange = (e) => {
           <button onClick={this.handleClick}>Sign Up</button>
           <input type='text' onChange={this.handleChange} name='login' placeholder='Login' />
         </form>
+        <Link to={'/CreateUser/'} id='createUser'>Create User</Link>
+        <Link to={'/User/'} id='user'>User</Link>
+        <Link to={'/ParkView/'} id='parkView'>Park View</Link>
         <h4>Social Media Icons</h4>
         <div className="topLine"></div>
         <section className="carouselContainer">
-          <Carousel>
-            {/*<div className="pictures"></div>*/}
-              <img alt='' src="https://images.pexels.com/photos/798/bench-people-smartphone-sun.jpg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb"/>
+          <Carousel style={{height:380}}>
+              <img alt='' src="https://static.pexels.com/photos/305244/pexels-photo-305244.jpeg"/>
               <img alt='' src="https://static.pexels.com/photos/24306/pexels-photo-24306.jpg"/>
               <img alt='' src="https://static.pexels.com/photos/386024/pexels-photo-386024.jpeg"/>
-              <img alt='' src="https://static.pexels.com/photos/305244/pexels-photo-305244.jpeg"/>
+              <img alt='' src="https://images.pexels.com/photos/798/bench-people-smartphone-sun.jpg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb"/>
               <img alt='' src="http://latina.lu/wp-content/uploads/2017/04/tenis-003.jpg"/>
           </Carousel>  
        </section>

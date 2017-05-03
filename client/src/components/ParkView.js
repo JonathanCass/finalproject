@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './ParkView.styles'
 
 class ParkView extends React.Component {
 //   constructor(props) {
@@ -8,8 +9,17 @@ class ParkView extends React.Component {
 
   render() {
     return (
+      <div style={styles.div}>
+        <h2>Type Of Play</h2>
       <div>
-        Park View
+        <input type='radio'/>
+        <label for='competitive'>Competitive</label>
+      </div>
+      <div style={styles.radio}>
+        <input type='radio'/>
+        <label for='leisurely'>Leisurely</label>
+      </div>
+      <div style={styles.line}></div>
       </div>
     )
   }

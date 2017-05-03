@@ -1,10 +1,8 @@
-html {box-sizing: border-box;}
-*, *:before, *:after {box-sizing: inherit;}
-
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 
 body {
    margin-top:15%; 
+   /*background-image: linear-gradient(to left, #A1FFCE, #FAFFD1);*/
 
 }
 #logo {
@@ -16,7 +14,6 @@ body {
     border:1px solid #d2d9da;
     width:900px;
     position:absolute;
-    margin-top:-1%;
     margin-left:14.8%;
 }
 h4 {
@@ -50,30 +47,40 @@ h4 {
     width:900px;
     overflow:hidden;
     margin-left:15%;
+    margin-top:3%;
+}
+#parkView, #user, #createUser {
+    border:1px solid;
+    margin:5px;
+    padding:2px;
 }
 
 img {  
     width:630px;
     height:auto;
-    margin-top:-14%;
+    margin-top:-16%;
 }
 .happening {
     margin-left:33%;
-    margin-top:3%;
+    margin-top:5%;
     font-family: 'Lobster', cursive; /*SAMPLE FONT FOR NOW*/
 }
 .matches {
     display:flex;
-    margin-left:9%;
+    margin-left:10%;
 }
 #person {
     border:1px solid gray;
     border-radius:50%;
-    height:200px;
-    width:200px;
+    height:190px;
+    width:190px;
     text-align:center;
-    line-height:200px;
+    line-height:190px;
     margin:20px;
     list-style: none;
 }
-
+h3 {
+    position:absolute;
+    margin-top:-15%;
+    color:white;
+}
