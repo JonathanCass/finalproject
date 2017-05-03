@@ -4,11 +4,15 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import DatePicker from 'material-ui/DatePicker'
 
 class ParkView extends React.Component {
-//   constructor(props) {
- 
-//    super(props)
-//   }
+  constructor(props) {
+   super(props)
+   this.state = {
 
+   }
+}
+handleClick = (e) => {
+  e.preventDefault()
+}
   render() {
     return (
       // <div className='body' style={styles.body}>
@@ -16,9 +20,9 @@ class ParkView extends React.Component {
           <h2 style={styles.h2}>Type Of Play</h2>
           <div style={styles.radioContainer}>
             <input type='radio'/>
-            <label for='competitive' style={styles.radio}>Competitive</label>
+            <label for="competitive" style={styles.radio}>Competitive</label>
             <input type='radio'/>
-            <label for='leisurely' style={styles.radio}>Leisurely</label>
+            <label for="leisurely" style={styles.radio}>Leisurely</label>
             <div className='line' style={styles.line}></div>
           </div>
           <div className='level'style={styles.level}>
@@ -41,6 +45,9 @@ class ParkView extends React.Component {
           <MuiThemeProvider>
              <DatePicker hintText="Choose Day" container="inline" mode="landscape" style={styles.calendar}/>
           </MuiThemeProvider>
+          <div className='notes'>
+            <textarea style={styles.notes} placeholder="Additional Notes"></textarea>
+          </div>
           <div style={styles.startTime}>
               <select className='start' style={styles.input}>
                 <option value='start'>Start Time</option>
@@ -100,7 +107,7 @@ class ParkView extends React.Component {
               </select>
           </div>
           <textarea placeholder='Gear Required If Applicable' style={styles.textarea}></textarea>       
-          <button style={styles.create}>Create</button><h5 style={styles.or}>Or</h5><button style={styles.browse}>Browse</button>
+          <button onClick={this.state.handleClick} style={styles.create}>Create</button><h5 style={styles.or}>Or</h5><button onClick={this.state.handleClick} style={styles.browse}>Browse</button>
       </div> // end of container
     )
   }

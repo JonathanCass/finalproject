@@ -66,18 +66,26 @@ const styles = {
         height:40,
         width:100,
         marginTop:'2em',
-        marginLeft:'28.5em'
+        marginLeft:'28.5em',
+        cursor:'pointer'
     },
     browse: {
         height:40,
         width:100,
         position:'absolute',
         marginTop:'-4.5em',
-        marginLeft:'42em'
+        marginLeft:'42em',
+        cursor:'pointer'
     },
     or: {
         marginTop:'-2em',
-        marginLeft: '32.5em'
+        marginLeft: '32.3em'
+    },
+    notes: {
+        position:'absolute',
+        width:250,
+        height:150,
+        marginTop:'6.4em'
     }
 }
 
