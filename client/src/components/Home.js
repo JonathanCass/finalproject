@@ -1,5 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {getUsers} from '../api/messaging'
+import {connect} from 'react-redux'
 
 const styles={
     link:{
@@ -7,12 +9,16 @@ const styles={
     }
 }
 class Home extends React.Component {
-//   constructor(props) {
- 
-//    super(props)
-//   }
-
+  constructor(props) {
+     super(props)
+    //   this.state={ 
+    // }
+  }
+  componentWillMount(){
+  	getUsers()
+  }
   render() {
+    //console.log('this.state.props', this.state.props)
     return (
       <div>
         Home Page
@@ -25,4 +31,8 @@ class Home extends React.Component {
   }
 }
 
-export default Home
+function mapStateToProps(appState){
+	return {users: appState.users}
+}
+
+export default connect(mapStateToProps)(Home)
