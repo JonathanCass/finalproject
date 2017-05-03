@@ -1,4 +1,5 @@
 import React from 'react'
+import UsersEvents from './UsersEvents'
 
 const styles={
     userHomeContainer:{
@@ -31,20 +32,30 @@ const styles={
     nextBlock:{
         width: 430,
         display: 'inline-block',
-        padding: 10
+        padding: 10,
+        marginLeft: 10
     },
-    nextLabel:{  
-        width: 430,
-        height: 40,
+    nextLabel:{ 
+        display: 'flex',
+        justifyContent: 'space-between', 
+        width: 413,
+        height: 50,
         fontSize: 26,
         color: '#d50000',
         textAlign: 'center',
-        paddingLeft: 10
+        marginBottom: 10,
+        paddingTop: 5
+    },
+    arrowButton:{
+        height:40,
+        width:40,
+        borderRadius: 5,
+        background: "#D50000",
     },
     nextGrid:{
         border: 'solid 1px black',
         borderWidth: '1px 0 0 1px',
-        width: 415,
+        width: 413,
         height: 120,
     },
     gridEntry:{
@@ -80,12 +91,12 @@ class UserHomePage extends React.Component {
   render() {
     return (
       <div style={styles.userHomeContainer}>
-        <div style={styles.header}>Welcome to Go Vegas! User</div>
+        <div style={styles.header}>Welcome to Go Vegas! UserName</div>
         
         <div style={styles.userMain}>
             <div style={styles.avatar}>Avatar</div>
             <div style={styles.nextBlock}>    
-                <div style={styles.nextLabel}>Next Activity</div>
+                <div style={styles.nextLabel}><button style={styles.arrowButton}></button><span>Upcoming Activity</span><button style={styles.arrowButton}></button></div>
                 <div style={styles.nextGrid}>
                     <div style={styles.gridEntry}>Date</div>
                     <div style={styles.gridEntry}>Location</div>
@@ -95,7 +106,7 @@ class UserHomePage extends React.Component {
                 </div>
             </div>
         </div>
-
+        <UsersEvents/>
       </div>
     )
   }
