@@ -3,12 +3,15 @@ import 'font-awesome/css/font-awesome.css'
 
 const styles={
     friendsContainer:{
-        width: 650
+        width: 650,
+        display: 'inline-block',
+        paddingLeft: 5,
+        background: 'linear-gradient( to bottom right, #ADD100 , #7B920A  )',
     },
     header:{
         width: 650,
         fontSize: 30,
-        color: '#FFFF00',
+        color: '#6A006A',
         textAlign: 'center',
         height: 40,
         paddingTop: 10,
@@ -16,7 +19,6 @@ const styles={
     },
     userMain:{
         width: 650,
-        padding: 10,
         display: 'flex'
     },
     avatar:{
@@ -42,7 +44,8 @@ const styles={
         color: '#d50000',
         textAlign: 'center',
         marginBottom: 10,
-        paddingTop: 5
+        paddingTop: 5,
+        lineHeight: '40px'
     },
     arrowButton:{
         height:40,
@@ -90,7 +93,7 @@ class Friends extends React.Component {
 
   render() {
     return (
-      <div style={styles.userHomeContainer}>
+      <div style={styles.friendsContainer}>
         <div style={styles.header}>What Friends are Doing</div>
         <div style={styles.userMain}>
             <div style={styles.avatar}>Avatar</div>

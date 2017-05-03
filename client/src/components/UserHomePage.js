@@ -7,7 +7,8 @@ import 'font-awesome/css/font-awesome.css'
 const styles={
     userHomeContainer:{
         width: 1300,
-        background: 'linear-gradient( to bottom right, #56CCF2 , #2F80ED )'
+        
+        display: 'flex'
     },
     header:{
         width: 650,
@@ -21,7 +22,7 @@ const styles={
     userMain:{
         width: 650,
         padding: 10,
-        display: 'flex'
+        display: 'inline-flex',
     },
     avatar:{
         width: 200,
@@ -93,8 +94,13 @@ const styles={
         color: '#FFFF00',
         textAlign: 'center',
         display: 'block',
-        marginBottom: 10 
+        marginBottom: 10, 
     },
+    left:{
+        width: 650,
+        display: 'inline-block',
+        background: 'linear-gradient( to bottom right, #56CCF2 , #2F80ED )',
+    }
 }
 
 class UserHomePage extends React.Component {
@@ -106,12 +112,12 @@ class UserHomePage extends React.Component {
   render() {
     return (
       <div style={styles.userHomeContainer}>
+        <div style={styles.left}> 
         <div style={styles.header}>Welcome to Go Vegas! UserName</div>
-        
         <div style={styles.userMain}>
             <div style={styles.avatar}>Avatar</div>
             <div style={styles.nextBlock}>    
-                <div style={styles.nextLabel}><button style={styles.arrowButton}><i className="fa fa-arrow-left" aria-hidden="true"></i></button><span>Upcoming Activity</span><button style={styles.arrowButton}><i className="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+                <div style={styles.nextLabel}><button style={styles.arrowButton}><i className="fa fa-arrow-left" aria-hidden="true"></i></button><span>Your Scheduled Activities</span><button style={styles.arrowButton}><i className="fa fa-arrow-right" aria-hidden="true"></i></button></div>
                 <div style={styles.nextGrid}>
                     <div style={styles.gridEntry}>Date</div>
                     <div style={styles.gridEntry}>Location</div>
@@ -125,6 +131,7 @@ class UserHomePage extends React.Component {
         <UsersEvents/>
         <div style={styles.gridHeader}>User's Matches</div>
         <UserMatches/>
+        </div>
         <Friends/>
       </div>
     )

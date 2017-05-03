@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+body {
+   margin-top:15%; 
+   /*background-image: linear-gradient(to left, #A1FFCE, #FAFFD1);*/
+
+}
+#logo {
+    height:180px;
+    width:350px;
+    margin-left:10%;
+}
+.topLine {
+    border:1px solid #d2d9da;
+    width:900px;
+    position:absolute;
+    margin-left:14.8%;
+}
+h4 {
+    float:right;
+    margin-right:15%;
+    margin-top:-1%;
+}
+.user {
+    float:right;
+    margin-top:-10%;
+    margin-right:13%;
+}
+.user input {
+    height:35px;
+    margin:5px;
+    color:gray;
+    font-size:15px;
+    text-align: center;
+}
+.user button {
+    height:35px;
+    margin:5px;
+    width:120px;
+    border-radius:5%;
+    font-size:15px;
+    color:white;
+    cursor:pointer;
+}
+.carouselContainer{
+    border:1px solid #d2d9da;
+    width:900px;
+    overflow:hidden;
+    margin-left:15%;
+    margin-top:3%;
+}
+#parkView, #user, #createUser {
+    border:1px solid;
+    margin:5px;
+    padding:2px;
+}
+
+img {  
+    width:630px;
+    height:auto;
+    margin-top:-16%;
+}
+.happening {
+    margin-left:33%;
+    margin-top:5%;
+    font-family: 'Lobster', cursive; /*SAMPLE FONT FOR NOW*/
+}
+.matches {
+    display:flex;
+    margin-left:10%;
+}
+#person {
+    border:1px solid gray;
+    border-radius:50%;
+    height:190px;
+    width:190px;
+    text-align:center;
+    line-height:190px;
+    margin:20px;
+    list-style: none;
+}
+h3 {
+    position:absolute;
+    margin-top:-15%;
+    color:white;
+}

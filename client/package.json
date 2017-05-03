@@ -6,6 +6,7 @@
     "axios": "^0.16.1",
     "font-awesome": "^4.7.0",
     "normalize.css": "^6.0.0",
+    "nuka-carousel": "^2.0.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
