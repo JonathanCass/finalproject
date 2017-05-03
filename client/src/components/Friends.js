@@ -3,7 +3,7 @@ import 'font-awesome/css/font-awesome.css'
 
 const styles={
     friendsContainer:{
-        width: 650,
+        width: 650
     },
     header:{
         width: 650,
