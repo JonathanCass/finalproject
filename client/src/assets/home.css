@@ -1,14 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 
 body {
-   margin-top:15%; 
+   margin-top:12%; 
    /*background-image: linear-gradient(to left, #A1FFCE, #FAFFD1);*/
-
+  
 }
 #logo {
-    height:180px;
-    width:350px;
-    margin-left:10%;
+    height:150px;
+    width:300px;
+    margin-left:3%;
 }
 .topLine {
     border:1px solid #d2d9da;
@@ -23,8 +23,8 @@ h4 {
 }
 .user {
     float:right;
-    margin-top:-10%;
-    margin-right:13%;
+    margin-top:-8%;
+    margin-right:6%;
 }
 .user input {
     height:35px;
@@ -49,8 +49,11 @@ h4 {
     margin-left:15%;
     margin-top:3%;
 }
-#parkView, #user, #createUser {
-    border:1px solid;
+.links {
+    margin-left:15%;
+}
+#home, #parkView, #userProfile, #createUser, #userHomePage { /*Navigation Links*/
+    text-decoration:none;
     margin:5px;
     padding:2px;
 }
