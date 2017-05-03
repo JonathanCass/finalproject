@@ -80,7 +80,17 @@ const styles={
         lineHeight: '42px',
         color: 'white',
         background: '#1DA2CF'
-    }
+    },
+    gridHeader:{
+        height: 40,
+        paddingTop: 10,
+        width: 630,
+        fontSize: 32,
+        color: '#FFFF00',
+        textAlign: 'center',
+        display: 'block',
+        marginBottom: 10 
+    },
 }
 
 class UserHomePage extends React.Component {
@@ -107,7 +117,9 @@ class UserHomePage extends React.Component {
                 </div>
             </div>
         </div>
+        <div style={styles.gridHeader}>User's Created Events</div>
         <UsersEvents/>
+        <div style={styles.gridHeader}>User's Matches</div>
         <UserMatches/>
       </div>
     )

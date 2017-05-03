@@ -44,16 +44,6 @@ const styles = {
         textAlign: 'center',
         fontSize: 30
     },
-    gridHeader:{
-        height: 40,
-        paddingTop: 10,
-        width: 630,
-        fontSize: 32,
-        color: '#FFFF00',
-        textAlign: 'center',
-        display: 'block',
-        marginBottom: 10 
-  },
 }
 class UsersEvents extends React.Component {
 //   constructor(props) {
@@ -63,8 +53,7 @@ class UsersEvents extends React.Component {
 
   render() {
     return (
-      <div style={styles.GridContainer}>
-        <div style={styles.gridHeader}>User's Created Events</div>  
+      <div style={styles.GridContainer}>      
         <div style={styles.gridLabel}>Park</div>
         <div style={styles.gridLabel}>Time</div>
         <div style={styles.gridLabel}>Activity</div>
