@@ -9,6 +9,7 @@ import Home from './Home'
 import UserHomePage from './UserHomePage'
 
 
+
 class App extends Component {
   constructor() {
     super()
@@ -18,15 +19,15 @@ class App extends Component {
   }
   render() {
     return (
-    	<Router>
-		    <div>	
-		      	  <Route exact={true} path='/' component={Home} /> {/*Greeting Page with Logo and Login / Sign Up*/}
-							<Route path='/UserProfile/' component={UserProfile} />        {/*Where Availability results are displayed, User info and availability settings are made here as well*/}
-            	<Route path='/CreateUser/' component={CreateUser} />      {/*Initial Profile Construction*/}
-          		<Route path='/ParkView' component={ParkView} />   {/*Create Event Listings here*/}
-              <Route path='/UserHomePage' component={UserHomePage} /> 
-		    </div>
-	  </Router>
+        <Router>
+          <div>	
+                <Route exact={true} path='/' component={Home} /> {/*Greeting Page with Logo and Login / Sign Up*/}
+                <Route path='/UserProfile/' component={UserProfile} />        {/*Where Availability results are displayed, User info and availability settings are made here as well*/}
+                <Route path='/CreateUser/' component={CreateUser} />      {/*Initial Profile Construction*/}
+                <Route path='/ParkView' component={ParkView} />   {/*Create Event Listings here*/}
+                <Route path='/UserHomePage' component={UserHomePage} /> 
+          </div>
+      </Router>
     )
   }
 }

@@ -49,7 +49,7 @@ h4 {
     margin-left:15%;
     margin-top:3%;
 }
-#parkView, #user, #createUser {
+#home, #parkView, #userProfile, #createUser, #userHomePage {
     border:1px solid;
     margin:5px;
     padding:2px;
