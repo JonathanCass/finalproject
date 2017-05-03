@@ -35,9 +35,6 @@ handleChange = (e) => {
           <button onClick={this.handleClick}>Sign Up</button>
           <input type='text' onChange={this.handleChange} name='login' placeholder='Login' />
         </form>
-        <Link to={'/CreateUser/'} id='createUser'>Create User</Link>
-        <Link to={'/User/'} id='user'>User</Link>
-        <Link to={'/ParkView/'} id='parkView'>Park View</Link>
         <h4>Social Media Icons</h4>
         <div className="topLine"></div>
         <section className="carouselContainer">
@@ -58,7 +55,14 @@ handleChange = (e) => {
             <li id="person">Match</li>
           </ul>
           {/*{this.state.dataname}*/}
+      <div>
+        Home Page
+        <Link to={'/CreateUser/'} style={styles.link}>Create User</Link>
+        <Link to={'/UserProfile/'} style={styles.link}>UserProfile</Link>
+        <Link to={'/UserHomePage/'} style={styles.link}>UserHomePage</Link>
+        <Link to={'/ParkView/'} style={styles.link}>ParkView</Link>
       </div>
+      </div> //end of container
     )
   }
 }
