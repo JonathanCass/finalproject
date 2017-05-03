@@ -59,7 +59,8 @@ const styles = {
         width:250
     },
     calendar: {
-        position:'absolute'
+        position:'absolute',
+        textAlign:'center'
     }
 }
 

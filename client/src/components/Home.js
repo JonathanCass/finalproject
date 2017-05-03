@@ -36,7 +36,7 @@ handleChange = (e) => {
           <input type='text' onChange={this.handleChange} name='login' placeholder='Login' />
         </form>
         <h4>Social Media Icons</h4>
-        <div>
+        <div className="links">
           <Link to={'/'} id='home'>Home</Link>
           <Link to={'/CreateUser/'} id='createUser'>Create User</Link>
           <Link to={'/UserProfile/'} id='userProfile'>UserProfile</Link>

@@ -49,8 +49,11 @@ h4 {
     margin-left:15%;
     margin-top:3%;
 }
-#home, #parkView, #userProfile, #createUser, #userHomePage {
-    border:1px solid;
+.links {
+    margin-left:15%;
+}
+#home, #parkView, #userProfile, #createUser, #userHomePage { /*Navigation Links*/
+    text-decoration:none;
     margin:5px;
     padding:2px;
 }
