@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom'
 import {getUsers} from '../api/messaging'
 import {connect} from 'react-redux'
 
-
 class Home extends React.Component {
   constructor(props) { 
     super(props)
@@ -32,13 +31,7 @@ componentWillMount(){
     //console.log('this.state.props', this.state.props)
     return (
       <div className="beginningContainer">
-        <img alt='' id="logo" src={require('../assets/Logo.png')}/>
-        <form onSubmit={this.handleSubmit} className="user">
-          <button onClick={this.handleClick}>Sign Up</button>
-          <input type='text' onChange={this.handleChange} name='login' placeholder='Login' />
-        </form>
-        <h4>Social Media Icons</h4>
-        <div className="topLine"></div>
+
         <section className="carouselContainer">
           <Carousel style={{height:380}}>
               <img alt='' src="https://static.pexels.com/photos/305244/pexels-photo-305244.jpeg"/>
@@ -64,6 +57,7 @@ componentWillMount(){
         <Link to={'/UserHomePage/'}>UserHomePage</Link>
         <Link to={'/ParkView/'}>ParkView</Link>
       </div>
+
       </div> //end of container
     )
   }
