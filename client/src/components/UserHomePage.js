@@ -1,5 +1,6 @@
 import React from 'react'
 import UsersEvents from './UsersEvents'
+import UserMatches from './UserMatches'
 
 const styles={
     userHomeContainer:{
@@ -107,6 +108,7 @@ class UserHomePage extends React.Component {
             </div>
         </div>
         <UsersEvents/>
+        <UserMatches/>
       </div>
     )
   }
