@@ -61,6 +61,23 @@ const styles = {
     calendar: {
         position:'absolute',
         textAlign:'center'
+    },
+    create: {
+        height:40,
+        width:100,
+        marginTop:'2em',
+        marginLeft:'28.5em'
+    },
+    browse: {
+        height:40,
+        width:100,
+        position:'absolute',
+        marginTop:'-4.5em',
+        marginLeft:'42em'
+    },
+    or: {
+        marginTop:'-2em',
+        marginLeft: '32.5em'
     }
 }
 

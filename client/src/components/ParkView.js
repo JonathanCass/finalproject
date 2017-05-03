@@ -11,7 +11,7 @@ class ParkView extends React.Component {
 
   render() {
     return (
-      <div className='body' style={styles.body}>
+      // <div className='body' style={styles.body}>
       <div style={styles.container}>    
           <h2 style={styles.h2}>Type Of Play</h2>
           <div style={styles.radioContainer}>
@@ -100,7 +100,7 @@ class ParkView extends React.Component {
               </select>
           </div>
           <textarea placeholder='Gear Required If Applicable' style={styles.textarea}></textarea>       
-        </div>
+          <button style={styles.create}>Create</button><h5 style={styles.or}>Or</h5><button style={styles.browse}>Browse</button>
       </div> // end of container
     )
   }
