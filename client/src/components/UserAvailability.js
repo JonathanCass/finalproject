@@ -28,7 +28,6 @@ class UserAvailability extends React.Component {
     })
   }
   render() {
-      console.log("this.state.availabilityArray", this.state.availabilityArray)
     return (
         <div style={styles.AvailabilityContainer}>
         <div style={styles.availabilityHeader}>User Availability Settings</div>
@@ -37,18 +36,18 @@ class UserAvailability extends React.Component {
         <div style={styles.left}>
             <select name="area" style={styles.select} onChange={this.handleChange} value={this.state.area}>
                 <option value="">Select Area of City</option>
-                <option value="1">Northwest Las Vegas</option>
-                <option value="2">Southwest Las Vegas</option>
-                <option value="3">Northeast Las Vegas</option>
-                <option value="4">Southeast Las Vegas</option>
-                <option value="5">Surrounding Area</option>
+                <option value="Northwest Las Vegas">Northwest Las Vegas</option>
+                <option value="Southwest Las Vegas">Southwest Las Vegas</option>
+                <option value="Northeast Las Vegas">Northeast Las Vegas</option>
+                <option value="Southeast Las Vegas">Southeast Las Vegas</option>
+                <option value="Surrounding Area">Surrounding Area</option>
             </select>
             <select name="day" style={styles.select} onChange={this.handleChange} value={this.state.day}>
                 <option value="">Select day of week</option>
                 <option value="Monday">Monday</option>
                 <option value="Tuesday">Tuesday</option>
                 <option value="Wednesday">Wednesday</option>
-                <option value="Thursdat">Thursday</option>
+                <option value="Thursday">Thursday</option>
                 <option value="Friday">Friday</option>
                 <option value="Saturday">Saturday</option>
                 <option value="Sunday">Sunday</option>
@@ -103,7 +102,7 @@ class UserAvailability extends React.Component {
       </div>
       <button style={styles.addAvailability} onClick={this.addAvailability}>Add to User Availability</button>
       
-      <UserAvailabilityGrid/>
+      <UserAvailabilityGrid availabilityArray={[...this.state.availabilityArray]}/>
 
       </div>
     )
