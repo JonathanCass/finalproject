@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './User.styles.js'
 import UserAvailability from './UserAvailability'
+import {connect} from 'react-redux'
 
 class User extends React.Component {
   constructor() {
@@ -15,6 +16,7 @@ class User extends React.Component {
     })
   }
   render() {
+    console.log('UserProfile this.props', this.props)
     return (
       <div style={styles.UserContainer}>
         
@@ -68,4 +70,8 @@ class User extends React.Component {
   }
 }
 
-export default User
+function mapStateToProps(appState){
+	return { user: appState.users}
+}
+
+export default connect(mapStateToProps)(User)

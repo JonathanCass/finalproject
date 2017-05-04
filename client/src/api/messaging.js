@@ -16,6 +16,12 @@ const socket = io.connect('http://localhost:3001')
 // 	})
 // }
 
+export function addUser(userObj){
+	store.dispatch({
+		type: 'ADD_USER',
+		user: userObj
+	})
+}
 export function getContacts() {
 	console.log('getContacts called')
  axios.get('http://10.68.0.58:3000/activities').then(results=>{

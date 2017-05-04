@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './User.styles.js'
+import {addUser} from '../api/messaging'
 
 class User extends React.Component {
   constructor() {
@@ -25,7 +26,9 @@ class User extends React.Component {
         privacy: this.state.privacy,
         password: this.state.password
       }
-      console.log('profileObj',profileObj)
+      console.log('profileObj', profileObj)
+      addUser(profileObj)
+      this.props.history.push('/UserProfile/')
   }
   handleChange = (e) => {
     this.setState({
@@ -68,8 +71,8 @@ class User extends React.Component {
             <input type="text" name="age" placeholder="Age" onChange={this.handleChange} style={styles.ageInput} value={this.state.age}></input>
             <select name="gender" style={styles.gender} onChange={this.handleChange} value={this.state.gender}>
               <option value="">Select Gender</option>
-              <option value="private">Male</option>
-              <option value="friends">Female</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
             </select>
             <select name="privacy" style={styles.privacy2} onChange={this.handleChange} value={this.state.privacy}>
               <option value="">Privacy Setting</option>
