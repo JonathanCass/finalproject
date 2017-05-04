@@ -18,8 +18,8 @@ render() {
                 <thead>
                     <tr>
                         <th>Date</th>
-                        <th>Start</th>
-                        <th>Stop</th>
+                        <th>(From) Start</th>
+                        <th>(To) Stop</th>
                         <th>Activity</th>
                         <th>Level</th>
                     </tr>

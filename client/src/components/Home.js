@@ -1,6 +1,7 @@
 import React from 'react'
 import '../assets/home.css'
 import Carousel from 'nuka-carousel'
+import 'font-awesome/css/font-awesome.css'
 
 
 
@@ -14,7 +15,6 @@ class Home extends React.Component {
 render() {
     return (
       <div className="beginningContainer">
-
         <section className="carouselContainer">
           <Carousel style={{height:380}}>
               <img alt='' src="https://static.pexels.com/photos/305244/pexels-photo-305244.jpeg"/>
