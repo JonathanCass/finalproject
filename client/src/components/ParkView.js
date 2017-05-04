@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './ParkView.styles'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import DatePicker from 'material-ui/DatePicker'
+import Table  from './ParkViewTable'
 
 class ParkView extends React.Component {
   constructor(props) {
@@ -15,7 +16,6 @@ handleClick = (e) => {
 }
   render() {
     return (
-      // <div className='body' style={styles.body}>
       <div style={styles.container}>    
           <h2 style={styles.h2}>Type Of Play</h2>
           <div style={styles.radioContainer}>
@@ -108,6 +108,8 @@ handleClick = (e) => {
           </div>
           <textarea placeholder='Gear Required If Applicable' style={styles.textarea}></textarea>       
           <button onClick={this.state.handleClick} style={styles.create}>Create</button><h5 style={styles.or}>Or</h5><button onClick={this.state.handleClick} style={styles.browse}>Browse</button>
+      
+          <Table />
       </div> // end of container
     )
   }

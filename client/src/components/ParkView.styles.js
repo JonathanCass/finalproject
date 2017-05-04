@@ -6,7 +6,6 @@ const styles = {
     //     background: '#53BE16'
     // },
     container: {
-        border:'2px solid gray',
         height:'auto',
         width:630,
         padding:'1em',
@@ -73,7 +72,7 @@ const styles = {
         height:40,
         width:100,
         position:'absolute',
-        marginTop:'-4.5em',
+        marginTop:'-4.6em',
         marginLeft:'42em',
         cursor:'pointer'
     },
