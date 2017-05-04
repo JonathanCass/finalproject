@@ -27,12 +27,12 @@ render() {
       
        <h1 className="happening">What's Happening In Your Area</h1>
           <ul className="matches">
-            <li id="person">Match</li> 
+            {/*<li id="person"></li> <img alt={data.name.first} src={data.picture.thumbnail}/>{data.activities}*/}
+            <li id="person">Match</li>
             <li id="person">Match</li>
             <li id="person">Match</li>
             <li id="person">Match</li>
           </ul>
-          {/*{this.state.dataname}*/}
       </div> //end of container
     )
   }

@@ -36,7 +36,7 @@ handleChange = (e) => {
             <label for="competitive" style={styles.radio}>Competitive</label>
             <input type='radio' onChange={this.handleChange} name='play' value={this.state.play}/>
             <label for="leisurely" style={styles.radio}>Leisurely</label>
-            <div className='line' style={styles.line}></div>
+          <div className='line' style={styles.line}></div>
           </div>
           <div className='level'style={styles.level}>
             <input type='checkbox' onChange={this.handleChange} name='level' value={this.state.level}/>

@@ -5,7 +5,11 @@ class Table extends React.Component {
     constructor() {
         super()
         this.state = {
-            data: ''
+            data: '',
+            start: '',
+            end: '',
+            activities: '',
+            level: ''
         }
     }
 
@@ -26,16 +30,17 @@ render() {
                 </thead>
                 <tbody>
                     <tr>
-                        <td style={styles.tableRow}>{this.state.data}Data Here</td>
-                        <td style={styles.tableRow}>{this.state.data}Data Here</td>
-                        <td style={styles.tableRow}>{this.state.data}Data Here</td>
-                        <td style={styles.tableRow}>{this.state.data}Data Here</td>
+                        <td style={styles.tableRow}>{this.state.date}Data Here</td>
+                        <td style={styles.tableRow}>{this.state.start}Data Here</td>
+                        <td style={styles.tableRow}>{this.state.end}Data Here</td>
+                        <td style={styles.tableRow}>{this.state.activities}Data Here</td>
+                        <td style={styles.tableRow}>{this.state.level}Data Here</td>
                     </tr>
                     <tr>
-                        <td style={styles.tableRow}>Cell</td>
-                        <td style={styles.tableRow}>Cell</td>
-                        <td style={styles.tableRow}>Cell</td>
-                        <td style={styles.tableRow}>Cell</td>
+                        <td style={styles.tableRow}>Cell Block</td>
+                        <td style={styles.tableRow}>Cell Block</td>
+                        <td style={styles.tableRow}>Cell Block</td>
+                        <td style={styles.tableRow}>Cell Block</td>
                     </tr>
                 </tbody>
             </table> 
