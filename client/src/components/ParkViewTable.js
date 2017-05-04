@@ -12,6 +12,8 @@ class Table extends React.Component {
 render() {
     return(
         <div className='tableAreaContainer' style={styles.tableAreaContainer}>
+            <img alt='' src="http://www.jqueryscript.net/images/Easy-Customizable-jQuery-Google-Maps-Plugin-googlemaps-js.jpg" style={styles.map}/>
+            <h4 style={styles.here}>Map Goes Here</h4>
             <table style={styles.table}>
                 <thead>
                     <tr>
@@ -36,8 +38,8 @@ render() {
                         <td style={styles.tableRow}>Cell</td>
                     </tr>
                 </tbody>
-            </table>
-        </div>
+            </table> 
+        </div> 
         )
     }
 }

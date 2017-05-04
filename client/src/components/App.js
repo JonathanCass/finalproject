@@ -15,9 +15,25 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      message: ''
+      login: ''
     }
   }
+  handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('here')
+  }
+  handleClick = (e) => {
+    e.preventDefault()
+    console.log('clicked')
+    // this.props.history.push('/CreateUser/')
+  }
+  handleChange = (e) => {
+    console.log('changed')
+    this.setState =({
+      [e.target.name]:e.target.value
+      
+    })
+ }
   render() {
     return (
         <Router>

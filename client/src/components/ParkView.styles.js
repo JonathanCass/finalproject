@@ -25,7 +25,7 @@ const styles = {
     line: {
         border:'1px solid gray',
         width:260,
-        marginLeft:165,
+        marginLeft:149,
         marginTop:'1em'
     },
     level: {
@@ -38,6 +38,7 @@ const styles = {
     activities: {
         height:40,
         width:250,  
+        marginTop:'3em'
     },
     input: {
         height:40,
@@ -49,16 +50,17 @@ const styles = {
     },
     endTime: {
         marginLeft:312,
-        marginTop:15
+        marginTop:30
     },
     textarea: {
         marginLeft:312,
-        marginTop:15,
+        marginTop:'4em',
         height:150,
         width:250
     },
     calendar: {
         position:'absolute',
+        marginTop:30,
         textAlign:'center'
     },
     create: {
@@ -84,7 +86,7 @@ const styles = {
         position:'absolute',
         width:250,
         height:150,
-        marginTop:'6.4em'
+        marginTop:'10.3em'
     }
 }
 

@@ -11,23 +11,7 @@ class Home extends React.Component {
      login:''
    }
 }
-
-handleSubmit = (e) => {  // FINISH HANDLE FUNCTIONS
-  e.preventDefault()
-
-}
-handleClick = (e) => {
-  e.preventDefault()
-  console.log('click')
-}
-handleChange = (e) => {
-  this.setState({
-    [e.target.name]:e.target.value
-    
-  })
-}
-
-  render() {
+render() {
     return (
       <div className="beginningContainer">
 
