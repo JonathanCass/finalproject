@@ -7,6 +7,13 @@ const styles ={
   AvailabilityContainer:{
     width: 1300,
   },
+  bigPicture:{
+    width: 630,
+    marginLeft: 10,
+    marginTop: 10,
+    background: 'white',
+    height: 600,
+  },
   top:{
     width: 650,
     padding: 10,
@@ -36,7 +43,6 @@ const styles ={
   avatarImg:{
     height: 300,
     width: 310,
-    
   },
   lineInput:{
     marginTop: 10,
@@ -61,9 +67,26 @@ const styles ={
     height: 40,
     border: 'solid 1px black'
   },
+  createUser:{
+    marginTop: 10,
+    marginLeft: 10,
+    width: 150,
+    height: 38,
+    borderRadius: 5,
+    border: 'solid 1px black',
+    background: '#53BE16',
+    color: 'white',
+    fontSize: 16
+  },
   privacy:{
     marginTop: 10,
     width: 310,
+    height: 38,
+    border: 'solid 1px black'
+  },
+  privacy2:{
+    marginTop: 10,
+    width: 150,
     height: 38,
     border: 'solid 1px black'
   },

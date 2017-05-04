@@ -9,13 +9,11 @@ class User extends React.Component {
       avatarUrl:'',firstName:'',lastName:'',privacy:'',bio:'',hobbies:'',interests:'Movies, Books, Games, Music',email:'',activities:[],age:'',address:'',password:''
     }
   }
-
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
     })
   }
-
   render() {
     return (
       <div style={styles.UserContainer}>
