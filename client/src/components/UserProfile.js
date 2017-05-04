@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './User.styles.js'
 import UserAvailability from './UserAvailability'
+import {connect} from 'react-redux'
 
 class User extends React.Component {
   constructor() {
@@ -9,27 +10,26 @@ class User extends React.Component {
       avatarUrl:'',firstName:'',lastName:'',privacy:'',bio:'',hobbies:'',interests:'Movies, Books, Games, Music',email:'',activities:[],age:'',address:'',password:''
     }
   }
-
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
     })
   }
-
   render() {
+    console.log('UserProfile this.props', this.props)
     return (
       <div style={styles.UserContainer}>
         
         <div style={styles.top}>
           
           <div style={styles.left}>
-            <div style={styles.avatar}>AVATAR PICTURE</div>
-            <input type="text" name="firstName" placeholder="First Name" onChange={this.handleChange} style={styles.lineInput} value={this.state.firstName}></input>
-            <input type="text" name="lastName" placeholder="Last Name" onChange={this.handleChange} style={styles.lineInput} value={this.state.lastName}></input>
-            <input type="text" name="avatarUrl" placeholder="Avatar Url" onChange={this.handleChange} style={styles.lineInput} value={this.state.avatarUrl}></input>
-            <input type="email" name="email" placeholder="Email" onChange={this.handleChange} style={styles.lineInput} value={this.state.email}></input>   
-            <input type="text" name="address" placeholder="Address" onChange={this.handleChange} style={styles.lineInput} value={this.state.address}></input>
-            <input type="password" name="password" placeholder="Password" onChange={this.handleChange} style={styles.lineInput} value={this.state.password}></input>
+            <div style={styles.avatar} ></div>
+            <button style={styles.editInfo2}>Edit</button><input type="text" name="firstName" placeholder="First Name" onChange={this.handleChange} style={styles.lineInput} value={this.state.firstName}></input>
+            <button style={styles.editInfo2}>Edit</button><input type="text" name="lastName" placeholder="Last Name" onChange={this.handleChange} style={styles.lineInput} value={this.state.lastName}></input>
+            <button style={styles.editInfo2}>Edit</button><input type="text" name="avatarUrl" placeholder="Avatar Url" onChange={this.handleChange} style={styles.lineInput} value={this.state.avatarUrl}></input>
+            <button style={styles.editInfo2}>Edit</button><input type="email" name="email" placeholder="Email" onChange={this.handleChange} style={styles.lineInput} value={this.state.email}></input>  
+            <button style={styles.editInfo2}>Edit</button><input type="text" name="address" placeholder="Address" onChange={this.handleChange} style={styles.lineInput} value={this.state.address}></input>
+            <button style={styles.editInfo2}>Edit</button><input type="password" name="password" placeholder="Password" onChange={this.handleChange} style={styles.lineInput} value={this.state.password}></input>
            </div>
            
            <div style={styles.right}>
@@ -70,4 +70,8 @@ class User extends React.Component {
   }
 }
 
-export default User
+function mapStateToProps(appState){
+	return { user: appState.users}
+}
+
+export default connect(mapStateToProps)(User)

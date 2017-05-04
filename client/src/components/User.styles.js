@@ -7,6 +7,13 @@ const styles ={
   AvailabilityContainer:{
     width: 1300,
   },
+  bigPicture:{
+    width: 630,
+    marginLeft: 10,
+    marginTop: 10,
+    background: 'white',
+    height: 600,
+  },
   top:{
     width: 650,
     padding: 10,
@@ -33,7 +40,19 @@ const styles ={
     border: 'solid 1px black',
     borderRadius: 3
   },
+  avatarImg:{
+    height: 300,
+    width: 310,
+  },
   lineInput:{
+    marginTop: 10,
+    width: 250,
+    height: 40,
+    border: 'solid 1px black',
+    textIndent: 5,
+    borderRadius: 3
+  },
+  lineInput2:{
     marginTop: 10,
     width: 310,
     height: 40,
@@ -56,9 +75,26 @@ const styles ={
     height: 40,
     border: 'solid 1px black'
   },
+  createUser:{
+    marginTop: 10,
+    marginLeft: 10,
+    width: 150,
+    height: 38,
+    borderRadius: 5,
+    border: 'solid 1px black',
+    background: '#53BE16',
+    color: 'white',
+    fontSize: 16
+  },
   privacy:{
     marginTop: 10,
     width: 310,
+    height: 38,
+    border: 'solid 1px black'
+  },
+  privacy2:{
+    marginTop: 10,
+    width: 150,
     height: 38,
     border: 'solid 1px black'
   },
@@ -139,6 +175,18 @@ const styles ={
     borderRadius: 3,
     fontSize: 15,
     lineHeight: '14px'
+  },
+  editInfo2:{
+    height: 30,
+    width: 50,
+    background: '#53BE16',
+    color: 'white',
+    marginRight: 10,
+    border: 'solid 1px black',
+    borderRadius: 3,
+    fontSize: 15,
+    lineHeight: '14px',
+    
   },
   availabilityHeader:{
       height: 40,

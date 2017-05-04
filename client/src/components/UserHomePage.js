@@ -3,6 +3,7 @@ import UsersEvents from './UsersEvents'
 import UserMatches from './UserMatches'
 import Friends from './Friends'
 import 'font-awesome/css/font-awesome.css'
+import {connect} from 'react-redux'
 
 const styles={
     userHomeContainer:{
@@ -104,10 +105,10 @@ const styles={
 }
 
 class UserHomePage extends React.Component {
-//   constructor(props) {
+//    constructor(props) {
  
-//    super(props)
-//   }
+//     super(props)
+//    }
 
   render() {
     return (
@@ -138,4 +139,8 @@ class UserHomePage extends React.Component {
   }
 }
 
-export default UserHomePage
+function mapStateToProps(appState){
+	return { user: appState.user}
+}
+
+export default connect(mapStateToProps)(UserHomePage)

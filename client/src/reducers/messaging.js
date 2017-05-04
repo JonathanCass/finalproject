@@ -1,5 +1,5 @@
 const initialState = {
-    messages: [], users: []
+    messages: [], users: ""
 }
 
 export default function messageReducer(state=initialState, action) {
@@ -8,6 +8,8 @@ export default function messageReducer(state=initialState, action) {
             return {...state, messages: [...state.messages, action.message]}
         case 'GET_USERS':
             return {...state, users: [...action.users] }
+        case 'ADD_USER':
+            return {...state, users: action.user}
         default:
             return state
     }
