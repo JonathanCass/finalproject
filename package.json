@@ -5,7 +5,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "concurrently \"nodemon server\" \"cd client && npm start\""
+    "start": "nodemon server"
   },
   "dependencies": {
     "body-parser": "^1.17.1",
