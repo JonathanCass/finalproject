@@ -2,7 +2,7 @@ import React from 'react'
 import '../assets/home.css'
 import Carousel from 'nuka-carousel'
 import {Link} from 'react-router-dom'
-import {getUsers} from '../api/messaging'
+import {getContacts} from '../api/messaging'
 import {connect} from 'react-redux'
 
 class Home extends React.Component {
@@ -25,10 +25,9 @@ handleChange = (e) => {
   })
 }
 componentWillMount(){
-  	getUsers()
+  	getContacts()
 }
   render() {
-    console.log('this.state.props', this.state.props)
     return (
       <div className="beginningContainer">
 
@@ -64,7 +63,7 @@ componentWillMount(){
 }
 
 function mapStateToProps(appState){
-	return {users: appState.users}
+	return {}
 }
 
 export default connect(mapStateToProps)(Home)

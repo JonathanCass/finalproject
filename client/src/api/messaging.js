@@ -7,6 +7,7 @@ var api = axios.create({
 	baseURL: 'http://10.68.0.58:3000'
 })
 
+
 export function getUsers() {
 	api.get('/users').then(res=>{
 		console.log('users', res.data)
@@ -14,6 +15,27 @@ export function getUsers() {
 			type: 'GET_USERS',
 			users: res.users
 		})
+	})
+}
+	
+
+// export function getUsers() {
+// 	console.log('getUSers in Api')
+// 	axios.get('http://10.68.0.58:3000/activities').then(res=>{
+// 		console.log('res', res)
+// 		store.dispatch({
+// 			type: 'GET_USERS',
+// 			users: res.users
+// 		})
+		
+// 	})
+// }
+
+export function addUser(userObj){
+	store.dispatch({
+		type: 'ADD_USER',
+		user: userObj
+
 	})
 }
 
