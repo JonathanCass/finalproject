@@ -28,7 +28,7 @@ componentWillMount(){
   	getUsers()
 }
   render() {
-    //console.log('this.state.props', this.state.props)
+    console.log('this.state.props', this.state.props)
     return (
       <div className="beginningContainer">
 
