@@ -2,17 +2,34 @@ import React from 'react'
 import '../assets/home.css'
 import Carousel from 'nuka-carousel'
 import 'font-awesome/css/font-awesome.css'
-
+import {Link} from 'react-router-dom'
+import {getContacts} from '../api/messaging'
+import {connect} from 'react-redux'
 
 
 class Home extends React.Component {
   constructor(props) { 
-   super(props)
-   this.state = {
-     login:''
+    super(props)
+      this.state = {
+      login:''
    }
 }
-render() {
+handleSubmit = (e) => {  // FINISH HANDLE FUNCTIONS
+  e.preventDefault()
+}
+handleClick = (e) => {
+  e.preventDefault()
+  console.log('click')
+}
+handleChange = (e) => {
+  this.setState({
+    [e.target.name]:e.target.value
+  })
+}
+componentWillMount(){
+  	getContacts()
+}
+  render() {
     return (
       <div className="beginningContainer">
         <section className="carouselContainer">
@@ -33,9 +50,14 @@ render() {
             <li id="person">Match</li>
             <li id="person">Match</li>
           </ul>
+          {/*{this.state.dataname}*/}
       </div> //end of container
     )
   }
 }
 
-export default Home
+function mapStateToProps(appState){
+	return {}
+}
+
+export default connect(mapStateToProps)(Home)

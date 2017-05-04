@@ -1,20 +1,17 @@
 import React from 'react'
-import UsersEvents from './UsersEvents'
-import UserMatches from './UserMatches'
-import Friends from './Friends'
 import 'font-awesome/css/font-awesome.css'
-import {connect} from 'react-redux'
 
 const styles={
-    userHomeContainer:{
-        width: 1300,
-        
-        display: 'flex'
+    friendsContainer:{
+        width: 650,
+        display: 'inline-block',
+        paddingLeft: 5,
+        background: 'linear-gradient( to right, #FFD200 , #F7971E  )',
     },
     header:{
         width: 650,
         fontSize: 32,
-        color: '#FFFF00',
+        color: '#241EB1',
         textAlign: 'center',
         height: 40,
         paddingTop: 10,
@@ -22,8 +19,7 @@ const styles={
     },
     userMain:{
         width: 650,
-        padding: 10,
-        display: 'inline-flex',
+        display: 'flex'
     },
     avatar:{
         width: 200,
@@ -44,8 +40,8 @@ const styles={
         justifyContent: 'space-between', 
         width: 413,
         height: 50,
-        fontSize: 26,
-        color: 'white',
+        fontSize: 28,
+        color: '#d50000',
         textAlign: 'center',
         marginBottom: 10,
         paddingTop: 5,
@@ -86,61 +82,35 @@ const styles={
         lineHeight: '42px',
         color: 'white',
         background: '#53BE16'
-    },
-    gridHeader:{
-        height: 40,
-        paddingTop: 10,
-        width: 630,
-        fontSize: 32,
-        color: '#FFFF00',
-        textAlign: 'center',
-        display: 'block',
-        marginBottom: 10, 
-    },
-    left:{
-        width: 650,
-        display: 'inline-block',
-        background: 'linear-gradient( to bottom right, #56CCF2 , #2F80ED )',
     }
 }
 
-class UserHomePage extends React.Component {
-//    constructor(props) {
+class Friends extends React.Component {
+//   constructor(props) {
  
-//     super(props)
-//    }
+//    super(props)
+//   }
 
   render() {
     return (
-      <div style={styles.userHomeContainer}>
-        <div style={styles.left}> 
-        <div style={styles.header}>Welcome to Go Vegas! UserName</div>
+      <div style={styles.friendsContainer}>
+        <div style={styles.header}>What Friends are Doing</div>
         <div style={styles.userMain}>
             <div style={styles.avatar}>Avatar</div>
             <div style={styles.nextBlock}>    
-                <div style={styles.nextLabel}><button style={styles.arrowButton}><i className="fa fa-arrow-left" aria-hidden="true"></i></button><span>Your Scheduled Activities</span><button style={styles.arrowButton}><i className="fa fa-arrow-right" aria-hidden="true"></i></button></div>
+                <div style={styles.nextLabel}><button style={styles.arrowButton}><i className="fa fa-arrow-left" aria-hidden="true"></i></button><span>Friends Name</span><button style={styles.arrowButton}><i className="fa fa-arrow-right" aria-hidden="true"></i></button></div>
                 <div style={styles.nextGrid}>
                     <div style={styles.gridEntry}>Date</div>
                     <div style={styles.gridEntry}>Location</div>
                     <div style={styles.gridEntry}>Hour AM/PM</div>
                     <div style={styles.gridEntry}>Activity</div>
-                    <div style={styles.gridWith}>Partner (User Profile Link)</div>
+                    <div style={styles.gridWith}>No Partner Yet, Click to Join!</div>
                 </div>
             </div>
         </div>
-        <div style={styles.gridHeader}>User's Created Events</div>
-        <UsersEvents/>
-        <div style={styles.gridHeader}>User's Matches</div>
-        <UserMatches/>
-        </div>
-        <Friends/>
       </div>
     )
   }
 }
 
-function mapStateToProps(appState){
-	return { user: appState.user}
-}
-
-export default connect(mapStateToProps)(UserHomePage)
+export default Friends

@@ -4,7 +4,6 @@ const styles = {
     UAGridContainer:{
         width: 650,
         padding: 10,
-        background: '#53BE16'
     },
     gridLabel:{
         width: 151,
@@ -19,7 +18,8 @@ const styles = {
         width:630,
         border: 'solid 1px black',
         borderWidth: '1px 0 0 1px',
-        display: 'flex'
+        display: 'flex',
+        marginTop: -1
     },
     gridBox:{
         width: 148,
@@ -54,10 +54,10 @@ const styles = {
   },
 }
 class UserAvailabilityGrid extends React.Component {
-//   constructor(props) {
+//    constructor(props) {
  
-//    super(props)
-//   }
+//     super(props)
+//    }
 
   render() {
     return (
@@ -68,13 +68,15 @@ class UserAvailabilityGrid extends React.Component {
         <div style={styles.gridLabel}>From</div>
         <div style={styles.gridLabel}>To</div>
        
-        <div style={styles.grid}>
-            <div style={styles.gridBox}>Northwest Las Vegas</div>
-            <div style={styles.gridBox}>Monday</div>
-            <div style={styles.gridBox}>10 AM</div>
-            <div style={styles.gridBox}>1 PM</div>
-            <div style={styles.removeEntry}>-</div>
-        </div>
+       {this.props.availabilityArray.map(entry=>(
+            <div style={styles.grid} key={Math.random()}>
+                <div style={styles.gridBox}>{entry.area}</div>
+                <div style={styles.gridBox}>{entry.day}</div>
+                <div style={styles.gridBox}>{entry.from}</div>
+                <div style={styles.gridBox}>{entry.to}</div>
+                <div style={styles.removeEntry}>-</div>
+            </div>	
+		))}
 
       </div>
     )
