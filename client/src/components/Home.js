@@ -1,9 +1,11 @@
 import React from 'react'
 import '../assets/home.css'
 import Carousel from 'nuka-carousel'
+import 'font-awesome/css/font-awesome.css'
 import {Link} from 'react-router-dom'
 import {getContacts} from '../api/messaging'
 import {connect} from 'react-redux'
+
 
 class Home extends React.Component {
   constructor(props) { 
@@ -30,7 +32,6 @@ componentWillMount(){
   render() {
     return (
       <div className="beginningContainer">
-
         <section className="carouselContainer">
           <Carousel style={{height:380}}>
               <img alt='' src="https://static.pexels.com/photos/305244/pexels-photo-305244.jpeg"/>
@@ -43,20 +44,13 @@ componentWillMount(){
       
        <h1 className="happening">What's Happening In Your Area</h1>
           <ul className="matches">
-            <li id="person">Match</li> 
+            {/*<li id="person"></li> <img alt={data.name.first} src={data.picture.thumbnail}/>{data.activities}*/}
+            <li id="person">Match</li>
             <li id="person">Match</li>
             <li id="person">Match</li>
             <li id="person">Match</li>
           </ul>
           {/*{this.state.dataname}*/}
-      <div>
-        Home Page
-        <Link to={'/CreateUser/'}>Create User</Link>
-        <Link to={'/UserProfile/'}>UserProfile</Link>
-        <Link to={'/UserHomePage/'}>UserHomePage</Link>
-        <Link to={'/ParkView/'}>ParkView</Link>
-      </div>
-
       </div> //end of container
     )
   }

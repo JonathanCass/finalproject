@@ -6,7 +6,6 @@ const styles = {
     //     background: '#53BE16'
     // },
     container: {
-        border:'2px solid gray',
         height:'auto',
         width:630,
         padding:'1em',
@@ -26,7 +25,7 @@ const styles = {
     line: {
         border:'1px solid gray',
         width:260,
-        marginLeft:165,
+        marginLeft:149,
         marginTop:'1em'
     },
     level: {
@@ -39,6 +38,7 @@ const styles = {
     activities: {
         height:40,
         width:250,  
+        marginTop:'3em'
     },
     input: {
         height:40,
@@ -50,16 +50,17 @@ const styles = {
     },
     endTime: {
         marginLeft:312,
-        marginTop:15
+        marginTop:30
     },
     textarea: {
         marginLeft:312,
-        marginTop:15,
+        marginTop:'4em',
         height:150,
         width:250
     },
     calendar: {
         position:'absolute',
+        marginTop:30,
         textAlign:'center'
     },
     create: {
@@ -73,19 +74,20 @@ const styles = {
         height:40,
         width:100,
         position:'absolute',
-        marginTop:'-4.5em',
+        marginTop:'-4.6em',
         marginLeft:'42em',
         cursor:'pointer'
     },
     or: {
         marginTop:'-2em',
-        marginLeft: '32.3em'
+        marginLeft: '32.3em',
+        textDecoration:'underline'
     },
     notes: {
         position:'absolute',
         width:250,
         height:150,
-        marginTop:'6.4em'
+        marginTop:'10.3em'
     }
 }
 
