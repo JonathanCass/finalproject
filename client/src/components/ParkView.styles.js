@@ -80,7 +80,8 @@ const styles = {
     },
     or: {
         marginTop:'-2em',
-        marginLeft: '32.3em'
+        marginLeft: '32.3em',
+        textDecoration:'underline'
     },
     notes: {
         position:'absolute',

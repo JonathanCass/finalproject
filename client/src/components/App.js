@@ -20,11 +20,12 @@ class App extends Component {
     }
   }
   handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault()   
     console.log('here')
   }
   handleClick = (e) => {
     e.preventDefault()
+    // this.props.history.push('/UserHomePage/')
     console.log('clicked')
   }
   handleChange = (e) => {
@@ -40,11 +41,14 @@ class App extends Component {
           <div>	
             <img alt='' id="logo" src={require('../assets/Logo.png')}/>
             <form onSubmit={this.handleSubmit} className="user">
-              <button onClick={this.handleClick}><Link to={'/CreateUser/'} style={{textDecoration:'none'}}>Sign Up</Link></button>
+              <button id='signup' onClick={this.handleClick}><Link to={'/CreateUser/'} style={{textDecoration:'none'}}>Sign Up</Link></button>
               <input type='text' onChange={this.handleChange} name='login' placeholder='Login' />
             </form>
-          <h4>Social Media Icons</h4>
-         
+          <div id='social'>
+            <i className="fa fa-facebook-square" aria-hidden="true"></i>
+            <i className="fa fa-twitter-square" aria-hidden="true"></i>
+            <i className="fa fa-rss-square" aria-hidden="true"></i>
+          </div>
           <div className="links">
             <Link to={'/'} id='home'>Home</Link>
             <Link to={'/CreateUser/'} id='createUser'>Create User</Link>

@@ -8,10 +8,13 @@ body {
     width:290px;
     margin-left:3%;
 }
-h4 {
+#social {
     float:right;
     margin-right:7%;
-    margin-top:3%;
+    margin-top:2%;
+}
+#social i {
+    margin:10px;
 }
 .user {
     float:right;
@@ -21,18 +24,23 @@ h4 {
 .user input {
     height:35px;
     margin:5px;
-    color:gray;
+    background-color:#f7f7f7;
     font-size:15px;
     text-align: center;
 }
-.user button {
+#signup {
     height:35px;
     margin:5px;
     width:120px;
-    border-radius:5%;
+    outline:0;
     font-size:15px;
-    color:white;
+    color:black;
     cursor:pointer;
+    background-color:#f7f7f7;
+}
+#signup:hover {
+    background-color:#bbeeff;
+    color:white;
 }
 .carouselContainer{
     border:1px solid #d2d9da;
@@ -42,19 +50,17 @@ h4 {
     margin-top:3%;
 }
 .links {
-    border:1px solid #f9f9f9;
     padding:15px;
 }
 #home, #parkView, #userProfile, #createUser, #userHomePage { /*Navigation Links*/
+    width:50px;
     text-decoration:none;
     margin:50px;
-    padding:2px;
+    padding:5px;
 }
 #home:hover, #parkView:hover, #userProfile:hover, #createUser:hover, #userHomePage:hover {
-    
-    background-image: linear-gradient(to left, #43C6AC, #F8FFAE);;
-    padding:15px;
-   
+    background-color: #eae9e9;
+    padding:15px;  
 }
 
 img {  
