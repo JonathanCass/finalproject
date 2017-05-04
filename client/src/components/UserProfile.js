@@ -24,12 +24,12 @@ class User extends React.Component {
           
           <div style={styles.left}>
             <div style={styles.avatar} ></div>
-            <input type="text" name="firstName" placeholder="First Name" onChange={this.handleChange} style={styles.lineInput} value={this.state.firstName}></input><button style={styles.editInfo2}>Edit</button>
-            <input type="text" name="lastName" placeholder="Last Name" onChange={this.handleChange} style={styles.lineInput} value={this.state.lastName}></input><button style={styles.editInfo2}>Edit</button>
-            <input type="text" name="avatarUrl" placeholder="Avatar Url" onChange={this.handleChange} style={styles.lineInput} value={this.state.avatarUrl}></input><button style={styles.editInfo2}>Edit</button>
-            <input type="email" name="email" placeholder="Email" onChange={this.handleChange} style={styles.lineInput} value={this.state.email}></input><button style={styles.editInfo2}>Edit</button>  
-            <input type="text" name="address" placeholder="Address" onChange={this.handleChange} style={styles.lineInput} value={this.state.address}></input><button style={styles.editInfo2}>Edit</button>
-            <input type="password" name="password" placeholder="Password" onChange={this.handleChange} style={styles.lineInput} value={this.state.password}></input><button style={styles.editInfo2}>Edit</button>
+            <button style={styles.editInfo2}>Edit</button><input type="text" name="firstName" placeholder="First Name" onChange={this.handleChange} style={styles.lineInput} value={this.state.firstName}></input>
+            <button style={styles.editInfo2}>Edit</button><input type="text" name="lastName" placeholder="Last Name" onChange={this.handleChange} style={styles.lineInput} value={this.state.lastName}></input>
+            <button style={styles.editInfo2}>Edit</button><input type="text" name="avatarUrl" placeholder="Avatar Url" onChange={this.handleChange} style={styles.lineInput} value={this.state.avatarUrl}></input>
+            <button style={styles.editInfo2}>Edit</button><input type="email" name="email" placeholder="Email" onChange={this.handleChange} style={styles.lineInput} value={this.state.email}></input>  
+            <button style={styles.editInfo2}>Edit</button><input type="text" name="address" placeholder="Address" onChange={this.handleChange} style={styles.lineInput} value={this.state.address}></input>
+            <button style={styles.editInfo2}>Edit</button><input type="password" name="password" placeholder="Password" onChange={this.handleChange} style={styles.lineInput} value={this.state.password}></input>
            </div>
            
            <div style={styles.right}>

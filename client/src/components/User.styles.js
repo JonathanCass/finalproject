@@ -46,7 +46,15 @@ const styles ={
   },
   lineInput:{
     marginTop: 10,
-    width: 240,
+    width: 250,
+    height: 40,
+    border: 'solid 1px black',
+    textIndent: 5,
+    borderRadius: 3
+  },
+  lineInput2:{
+    marginTop: 10,
+    width: 310,
     height: 40,
     border: 'solid 1px black',
     textIndent: 5,
@@ -173,14 +181,12 @@ const styles ={
     width: 50,
     background: '#53BE16',
     color: 'white',
-    marginLeft: 10,
+    marginRight: 10,
     border: 'solid 1px black',
     borderRadius: 3,
     fontSize: 15,
     lineHeight: '14px',
-    position: 'relative',
-    right: 64,
-    top: 1
+    
   },
   availabilityHeader:{
       height: 40,
