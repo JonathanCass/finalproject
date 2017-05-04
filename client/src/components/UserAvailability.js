@@ -6,16 +6,29 @@ class UserAvailability extends React.Component {
     constructor() {
         super()
         this.state = {
-            area:'',day:'',from:0,to:0,fromAmPm:'',toAmPm:''
+            area:'',day:'',from:0,to:0,fromAmPm:'',toAmPm:'',availabilityArray:[]
     }
   }
-
+  addAvailability = (e) => {
+  	e.preventDefault()
+      var availabilityObj ={
+          area: this.state.area,
+          day: this.state.day,
+          from: this.state.from +" "+ this.state.fromAmPm ,
+          to: this.state.to +" "+ this.state.toAmPm 
+      }
+    this.setState({
+      availabilityArray : [...this.state.availabilityArray, availabilityObj],
+      area:'',day:'',from:0,to:0,fromAmPm:'',toAmPm:''
+    })
+  }
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
     })
   }
   render() {
+      console.log("this.state.availabilityArray", this.state.availabilityArray)
     return (
         <div style={styles.AvailabilityContainer}>
         <div style={styles.availabilityHeader}>User Availability Settings</div>
@@ -32,13 +45,13 @@ class UserAvailability extends React.Component {
             </select>
             <select name="day" style={styles.select} onChange={this.handleChange} value={this.state.day}>
                 <option value="">Select day of week</option>
-                <option value="private">Monday</option>
-                <option value="friends">Tuesday</option>
-                <option value="private">Wednesday</option>
-                <option value="friends">Thursday</option>
-                <option value="private">Friday</option>
-                <option value="friends">Saturday</option>
-                <option value="private">Sunday</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursdat">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
             </select>
         </div>
 
@@ -82,13 +95,13 @@ class UserAvailability extends React.Component {
             </select>
             <select name="toAmPm" style={styles.AmPm} onChange={this.handleChange} value={this.state.toAmPm}>
                 <option value="">AM/PM</option>
-                <option value="private">AM</option>
-                <option value="friends">PM</option>
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
             </select>
         </div>
         
       </div>
-      <button style={styles.addAvailability}>Add to User Availability</button>
+      <button style={styles.addAvailability} onClick={this.addAvailability}>Add to User Availability</button>
       
       <UserAvailabilityGrid/>
 

@@ -33,6 +33,11 @@ const styles ={
     border: 'solid 1px black',
     borderRadius: 3
   },
+  avatarImg:{
+    height: 300,
+    width: 310,
+    
+  },
   lineInput:{
     marginTop: 10,
     width: 310,

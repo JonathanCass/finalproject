@@ -23,7 +23,7 @@ class User extends React.Component {
         <div style={styles.top}>
           
           <div style={styles.left}>
-            <div style={styles.avatar}>AVATAR PICTURE</div>
+            <div style={styles.avatar} ></div>
             <input type="text" name="firstName" placeholder="First Name" onChange={this.handleChange} style={styles.lineInput} value={this.state.firstName}></input>
             <input type="text" name="lastName" placeholder="Last Name" onChange={this.handleChange} style={styles.lineInput} value={this.state.lastName}></input>
             <input type="text" name="avatarUrl" placeholder="Avatar Url" onChange={this.handleChange} style={styles.lineInput} value={this.state.avatarUrl}></input>

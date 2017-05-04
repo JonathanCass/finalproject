@@ -5,7 +5,7 @@ const socket = io.connect('http://localhost:3001')
 //const socket = io.connect('http://10.68.0.156:3001')
 
 export function getUsers() {
-	axios.get('http://10.68.0.58:3001/users').then(res=>{
+	axios.get('http://10.68.0.58:3001/activities').then(res=>{
 		store.dispatch({
 			type: 'GET_USERS',
 			users: res.users
