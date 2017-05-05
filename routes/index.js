@@ -1,19 +1,7 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-const app = express()
-const server = require('http').createServer(app)
-//const io = require('socket.io')(server)
+var express = require('express');
+var router = express.Router();
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
-app.use( bodyParser.json() );       // to support JSON-encoded bodies
-app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-  extended: true
-})); 
+/* GET home page. */
 
 //CONNECT TO DATABASE 
 //host: 'http://10.68.0.58',
@@ -28,7 +16,7 @@ const conn = mysql.createConnection({
 
 conn.connect()
 
-app.get('/activities', function(req, res){
+router.get('/activities', function(req, res){
     conn.query('SELECT * FROM activities', function(err, results){
         var response = {
             activities: results
@@ -37,7 +25,7 @@ app.get('/activities', function(req, res){
     })
 })
 
-app.get('/event', function(req, res){
+router.get('/event', function(req, res){
     conn.query('SELECT * FROM event', function(err, results){
         var response = {
             event: results
@@ -47,7 +35,7 @@ app.get('/event', function(req, res){
 })
 
 
-app.get('/parks', function(req, res){
+router.get('/parks', function(req, res){
    conn.query('SELECT * FROM parks', function(err, results){
        console.log(results)
        var response = {
@@ -58,7 +46,7 @@ app.get('/parks', function(req, res){
    })
 })
 
-app.get('/parks_activities', function(req, res){
+router.get('/parks_activities', function(req, res){
    conn.query('SELECT * FROM parks_activities', function(err, results){
        console.log(results)
        var response = {
@@ -69,7 +57,7 @@ app.get('/parks_activities', function(req, res){
    })
 })
 
-app.get('/users', function(req, res){
+router.get('/users', function(req, res){
     conn.query('SELECT * FROM users', function(err, results){
         var response = {
             users: results
@@ -78,7 +66,7 @@ app.get('/users', function(req, res){
     })
 })
 
-app.get('/users_activities', function(req, res){
+router.get('/users_activities', function(req, res){
     conn.query('SELECT * FROM users_activities', function(err, results){
         var response = {
             users_activities: results
@@ -87,23 +75,4 @@ app.get('/users_activities', function(req, res){
     })
 })
 
-
-// app.get("*", function(req, res){
-//     res.sendfile(__dirname + '/client/public/index.html')
-// })
-
-// app.get("/api", function(req, res){
-//     res.json({
-//         "foo":"bar"
-//     })
-// })
-
-// io.on('connection', function(socket){
-//     socket.on('addMessage', function(message){
-//         io.emit('newMessage', message)
-//     })
-// })
-
-server.listen(3001, '0.0.0.0', function(){
-    console.log('listening on port 3001')
-})
+module.exports = router;
