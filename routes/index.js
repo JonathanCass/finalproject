@@ -35,19 +35,18 @@ router.get('/event', function(req, res){
     })
 })
 
-
 router.get('/parks', function(req, res){
    conn.query('SELECT * FROM parks', function(err, results){
        var response = {
            parks: results
        }
-
        res.json(response)
    })
 })
 
+
 router.get('/parks_activities', function(req, res){
-   conn.query('SELECT * FROM parks_activities', function(err, results){
+   conn.query('SELECT * FROM all_park_activities', function(err, results){
       //  console.log(results)
        var response = {
            parks_activities: results
@@ -57,6 +56,20 @@ router.get('/parks_activities', function(req, res){
    })
 })
 
+
+// router.get('/login', function(req, res){
+// var sql = 'SELECT id FROM login (username) VALUES (?)'
+
+//    conn.query( sql, [req.body.username], function(err, results){
+//        console.log(results)
+//        var response = {
+//            username: results
+//        }
+
+//        res.json(response)
+//    })
+// })
+
 router.get('/users', function(req, res){
     conn.query('SELECT * FROM users', function(err, results){
         var response = {
@@ -64,10 +77,10 @@ router.get('/users', function(req, res){
         }
         res.json(response)
     })
-})
+}) 
 
-router.get('/usersId', function(req, res){
-    conn.query('SELECT id FROM users order by id desc limit 1;', function(err, results){
+router.get('/currentUser', function(req, res){
+    conn.query('SELECT id FROM users group by id, currenttime order by currenttime desc limit 1  ;', function(err, results){
         var response = {
             usersId: results
         }
@@ -75,23 +88,32 @@ router.get('/usersId', function(req, res){
     })
 })
 
-router.get('/users_activities', function(req, res){
-    conn.query('SELECT * FROM users_activities', function(err, results){
-        var response = {
-            users_activities: results
-        }
-        res.json(response)
-    })
-})
+// router.get('/users_activities', function(req, res){
+//     conn.query('SELECT * FROM users_activities', function(err, results){
+//         var response = {
+//             users_activities: results
+//         }
+//         res.json(response)
+//     })
+// })
 
-router.get('/event', function(req, res){
-    conn.query('SELECT * FROM event', function(err, results){
+router.get('/friends', function(req, res){
+    conn.query('SELECT * FROM friends', function(err, results){
         var response = {
-            event: results
+            friends: results
         }
         res.json(response)
     })
-})
+})  
+
+// router.get('/event', function(req, res){
+//     conn.query('SELECT * FROM event', function(err, results){
+//         var response = {
+//             event: results
+//         }
+//         res.json(response)
+//     })
+// })
 
 router.get('/availability', function(req, res){
   console.log('availability', res)
@@ -116,11 +138,29 @@ router.get('/availability', function(req, res){
 //   })
 // })
 
+router.post('/login', function(req, res){
+//sql = "update users set currentuser = ? where username = ?"
+var sql = "update users set currentuser = ?, currenttime = ? where username = ?"
+console.log(req)
+  conn.query(sql, [req.body.userlogin, req.body.currentTime, req.body.userlogin ], function(err, results){
+
+    if(err){
+      res.json({
+        'message':'Error... Current User Not Added'
+      })
+    }
+     res.json({
+       'message':'Current User Added'
+     })
+  })
+})
+
+
 router.post('/users', function(req, res){
   console.log('client post', res.body)
-  var sql = 'INSERT INTO users (fname, lname, email, avatar, bio, privacy, activities_info, hobbies, interests, age, gender) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+  var sql = 'INSERT INTO users (fname, lname, email, avatar, bio, privacy, activities_info, hobbies, interests, age, gender, username, password) VALUES (?,?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
 
-  conn.query(sql, [req.body.fname, req.body.lname, req.body.email, req.body.avatar, req.body.bio, req.body.privacy, req.body.activities_info, req.body.hobbies, req.body.interests,req.body.age,req.body.gender], function(err, results){
+  conn.query(sql, [req.body.fname, req.body.lname, req.body.email, req.body.avatar, req.body.bio, req.body.privacy, req.body.activities_info, req.body.hobbies, req.body.interests,req.body.age,req.body.gender, req.body.username, req.body.password], function(err, results){
     if(err){
       res.json({
         'message':'Error... User Not Added'
@@ -163,6 +203,22 @@ router.post('/availability', function(req, res){
     })
   })
 })
+
+router.post('/friends', function(req, res){
+ console.log('client post', res.body)
+ var sql = 'INSERT INTO friends (userid,friend) VALUES (?, ?)'
+ conn.query(sql, [req.body.userid, req.body.friend],  function(err, results){
+   if(err){
+     res.json({
+       'message':'Error... Friends Not Updated'
+     })
+   }
+    res.json({
+      'message':'Friends Updated'
+    })
+ })
+})
+
 
 router.post
 
