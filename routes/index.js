@@ -173,9 +173,10 @@ router.post('/users', function(req, res){
 })
 
 router.post('/event', function(req, res){
-  var sql = 'INSERT INTO event (user_id1, user_id2, activity_id, park_id, time_start_hour, time_start_suffix, date_day, date_month) VALUES (?,?,?,?, ?, ?, ?, ?)'
+  console.log(req)
+  var sql = 'INSERT INTO event (user_id1, user_id2, activity, park, time_start_hour, time_start_suffix, date_day, date_month, type_of_play, skill_level, notes, gear) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)'
 
-  conn.query(sql, [req.body.user_id1, req.body.user_id2, req.body.activity_id, req.body.park_id, req.body.time_start_hour, req.body.time_start_suffix, req.body.date_day, req.body.date_month], function(err, results){
+  conn.query(sql, [req.body.user_id1, req.body.user_id2, req.body.activity, req.body.park, req.body.time_start_hour, req.body.time_start_suffix, req.body.date_day,req.body.date_month, req.body.type_of_play, req.body.skill_level, req.body.notes, req.body.gear], function(err, results){
     if(err){
       res.json({
          'message':'Error... Event Not Added'
